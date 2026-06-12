@@ -27,7 +27,7 @@ export default function Historia() {
           if (e.isIntersecting) setAtivo(Number(e.target.dataset.i));
         });
       },
-      { rootMargin: '-40% 0px -40% 0px' }
+      { rootMargin: '-35% 0px -45% 0px' }
     );
     refs.current.forEach((el) => el && obs.observe(el));
     return () => obs.disconnect();

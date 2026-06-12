@@ -281,6 +281,45 @@ img.minia{width:100%;border-radius:var(--r-1);border:1px solid var(--borda)}
 .refs-lista{font-size:.86rem;color:var(--cinza);padding-left:0;list-style:none;display:grid;gap:var(--s-2)}
 .refs-lista li{padding-left:var(--s-4);text-indent:calc(-1 * var(--s-4))}
 
+/* ================= HUB DO HOTSITE ================= */
+.hot-hero.compacto{padding:var(--s-5)}
+.hot-hero.compacto h2{font-size:var(--fs-h2);margin-top:var(--s-2)}
+.ficha5.duas-colunas{grid-template-columns:1fr 1fr}
+.ficha5.duas-colunas .item:first-child{grid-column:1 / -1}
+@media(max-width:900px){.ficha5.duas-colunas{grid-template-columns:1fr}}
+.central-titulo{color:var(--azul);font-size:1.05rem;margin:var(--s-5) 0 var(--s-2);font-weight:800}
+.central{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(146px,100%),1fr));gap:var(--s-2)}
+.tile{display:flex;flex-direction:column;align-items:center;gap:4px;text-align:center;
+  background:#fff;border:1px solid var(--borda);border-radius:var(--r-2);
+  padding:var(--s-3) var(--s-2);text-decoration:none;color:inherit;
+  transition:transform var(--dur) var(--ease),box-shadow var(--dur) var(--ease),border-color var(--dur)}
+.tile:hover{transform:translateY(-2px);box-shadow:var(--sombra-2);border-color:var(--govbr)}
+.tile .tipo-ico{width:38px;height:38px;margin:0}
+.tile b{font-size:.84rem;color:var(--azul)}
+.tile small{font-size:.7rem;color:var(--rodape)}
+
+details.sec{background:#fff;border:1px solid var(--borda);border-radius:var(--r-2);
+  margin-top:var(--s-3);box-shadow:var(--sombra-1);overflow:hidden}
+details.sec summary{display:flex;align-items:center;gap:var(--s-3);padding:var(--s-3) var(--s-4);
+  cursor:pointer;list-style:none;user-select:none}
+details.sec summary::-webkit-details-marker{display:none}
+details.sec summary:hover{background:var(--off)}
+details.sec .sec-titulo{display:flex;flex-direction:column;min-width:0}
+details.sec .sec-titulo b{color:var(--azul);font-size:1rem}
+details.sec .sec-titulo small{color:var(--rodape);font-size:.8rem}
+details.sec .chevron{margin-left:auto;width:11px;height:11px;border-right:2.5px solid var(--rodape);
+  border-bottom:2.5px solid var(--rodape);transform:rotate(45deg);
+  transition:transform var(--dur) var(--ease);flex:0 0 auto}
+details.sec[open] .chevron{transform:rotate(225deg)}
+details.sec .sec-corpo{padding:var(--s-2) var(--s-4) var(--s-5)}
+details.sec summary .tipo-ico{width:38px;height:38px}
+.doi-badge{display:inline-block;font-size:.72rem;font-weight:700;text-decoration:none;
+  background:var(--tint);color:var(--govbr);border:1px solid #B9CCE8;border-radius:999px;
+  padding:1px 9px;white-space:nowrap}
+.doi-badge.cinza{background:var(--off);color:var(--rodape);border-color:var(--borda)}
+.mapa-controles{display:flex;align-items:center;justify-content:space-between;gap:var(--s-3);
+  flex-wrap:wrap;margin-bottom:var(--s-2)}
+
 /* ================= GLOSSÁRIO HOVER ================= */
 .glos{position:relative;border-bottom:2px dotted var(--govbr);cursor:help;font-weight:600;color:var(--govbr)}
 .glos .glos-tip{visibility:hidden;opacity:0;position:absolute;left:50%;bottom:calc(100% + 8px);
@@ -299,7 +338,7 @@ img.minia{width:100%;border-radius:var(--r-1);border:1px solid var(--borda)}
 .scrolly .grafico-fixo h4{color:var(--azul);font-size:1rem;margin-bottom:var(--s-2);
   transition:opacity var(--dur-2) var(--ease)}
 .scrolly .grafico-fixo svg{width:100%;height:auto}
-.scrolly .passos{display:flex;flex-direction:column;gap:55vh;padding:30vh 0 40vh}
+.scrolly .passos{display:flex;flex-direction:column;gap:26vh;padding:18vh 0 24vh}
 .scrolly .passo{background:#fff;border:1px solid var(--borda);border-left:6px solid var(--azul);
   border-radius:var(--r-2);padding:var(--s-4) var(--s-5);box-shadow:var(--sombra-1);
   opacity:.45;transition:opacity var(--dur-2) var(--ease)}

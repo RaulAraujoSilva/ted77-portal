@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { TIPOS, comAsset, capaDe } from '../../../lib/dados';
+import { TIPOS, comAsset, capaDe, destinoDe } from '../../../lib/dados';
 import { TipoIcone } from '../../../components/Icones';
 
 export function generateStaticParams() {
@@ -13,7 +13,7 @@ export function generateMetadata({ params }) {
 
 export default function Galeria({ params }) {
   const t = TIPOS.find((x) => x.id === params.tipo);
-  const pubs = comAsset(t.chave);
+  const pubs = comAsset(t.chave, t.fonte);
   return (
     <main id="conteudo" className="container" data-tipo={t.id}>
       <nav className="crumb" aria-label="Trilha de navegação">
@@ -37,8 +37,8 @@ export default function Galeria({ params }) {
       ) : (
         <div className="grid g3" style={{ marginTop: 'var(--s-4)' }}>
           {pubs.map((p) => {
-            const destino = p.manifest.assets[t.chave] || p.manifest.links[t.chave];
-            const externo = !p.manifest.assets[t.chave];
+            const destino = destinoDe(p, t);
+            const externo = !t.fonte && !p.manifest.assets[t.chave];
             const capa = capaDe(p);
             return (
               <div key={p.id} className="card pub" data-tema={p.tema}>

@@ -114,14 +114,65 @@
  ],
  "mindmap": "# O tesouro de dados do SUS\n## 1 · O tesouro (DATASUS)\n### SUS atende +75% da população\n### Sistemas nacionais\n#### SIH — internações\n#### SIA — ambulatório\n#### CNES — estabelecimentos\n#### SIM — mortalidade\n#### SINASC — nascidos vivos\n#### SINAN — notificações\n## 2 · O problema\n### Silos: formatos e códigos próprios\n### Sem ID único de paciente\n### Trajetória do cuidado se perde\n### TabNet = tabelas estáticas\n## 3 · O caminho (pipeline)\n### Extração — PySUS / FTP oficial\n### Limpeza — CID-10, duplicidades\n### Vinculação probabilística — Fellegi-Sunter\n### OLAP — fatos e dimensões\n## 4 · O resultado\n### Painéis interativos (BI)\n### Tendências em minutos, não dias\n### Caso real: 926 mil internações RJ-2025\n### Base aberta + painel públicos\n## Futuro\n### Nuvem e tempo quase real\n### OMOP · HL7 FHIR\n### IA preditiva explicável",
  "referencias": [
-  "ALVES, L. F.; SILVA, R. A.; OLIVEIRA, D. Z. W.; RODRIGUES, L. E. M.; SEIXAS, F. L.; SANTOS, A. B. Building Health Management Dashboards with DATASUS Public Data. IEEE INDUSCON. Universidade Federal Fluminense. Pesquisa apoiada pelo TED nº 77/2024 (SEIDIGI/Ministério da Saúde).",
-  "ALI, M. S. et al. Administrative data linkage in Brazil: potentials for health technology assessment. Frontiers in Pharmacology, v. 10, p. 984, 2019.",
-  "ICHIHARA, M. Y.; ALMEIDA, B.; BARRETO, M. L. CIDACS: Brazil's Center for Data and Knowledge Integration for Health. International Journal of Population Data Science, v. 6, n. 1, 2021.",
-  "JUNIOR, E. P. P. et al. Integrating real-world data from Brazil and Pakistan into the OMOP common data model... JAMIA, v. 30, n. 4, p. 643-655, 2023.",
-  "GAZZARATA, R. et al. HL7 FHIR in digital healthcare ecosystems for chronic disease management: scoping review. International Journal of Medical Informatics, 2024.",
-  "FREIRE, S. M.; SOUZA, R. C.; ALMEIDA, R. T. Integrating Brazilian health information systems in order to support the building of data warehouses. Research on Biomedical Engineering, v. 31, p. 196-207, 2015.",
-  "TED 77/2024 — Transformação Digital do SUS (UFF/FEC/SEIDIGI-MS). Internações hospitalares do SUS no Rio de Janeiro — 2025 (SIH/SUS), base de dados aberta, v1.0.0, 2026. Disponível em: github.com/RaulAraujoSilva/ted77-sih-rj-dados-abertos."
+  {
+   "texto": "ALVES, L. F.; SILVA, R. A.; OLIVEIRA, D. Z. W.; RODRIGUES, L. E. M.; SEIXAS, F. L.; SANTOS, A. B. Building Health Management Dashboards with DATASUS Public Data. IEEE INDUSCON. Universidade Federal Fluminense. Pesquisa apoiada pelo TED nº 77/2024 (SEIDIGI/Ministério da Saúde)."
+  },
+  {
+   "texto": "BRASIL. Ministério da Saúde. DATASUS — Departamento de Informática do SUS. Portal oficial, 2024.",
+   "url": "https://datasus.saude.gov.br"
+  },
+  {
+   "texto": "ALI, M. S. et al. Administrative data linkage in Brazil: potentials for health technology assessment. Frontiers in Pharmacology, v. 10, p. 984, 2019.",
+   "doi": "10.3389/fphar.2019.00984"
+  },
+  {
+   "texto": "CUNHA, E. M.; VARGENS, J. M. C. Sistemas de informação do Sistema Único de Saúde. Rio de Janeiro: EAD/ENSP, 2017."
+  },
+  {
+   "texto": "ALMEIDA JUNIOR, A. A. G. et al. Building the national database of health centred on the individual: administrative and epidemiological record linkage — Brazil, 2000-2015. International Journal of Population Data Science, v. 3, n. 1, p. 446, 2018.",
+   "doi": "10.23889/ijpds.v3i1.446"
+  },
+  {
+   "texto": "ICHIHARA, M. Y.; ALMEIDA, B.; BARRETO, M. L. CIDACS: Brazil's Center for Data and Knowledge Integration for Health. International Journal of Population Data Science, v. 6, n. 1, p. 1683, 2021.",
+   "doi": "10.23889/ijpds.v6i1.1683"
+  },
+  {
+   "texto": "PIRES JUNIOR, E. P. et al. Integrating real-world data from Brazil and Pakistan into the OMOP common data model and standardized health analytics framework to characterize COVID-19 in the Global South. Journal of the American Medical Informatics Association, v. 30, n. 4, p. 643-655, 2023.",
+   "doi": "10.1093/jamia/ocac180"
+  },
+  {
+   "texto": "FREIRE, S. M.; SOUZA, R. C.; ALMEIDA, R. T. Integrating Brazilian health information systems in order to support the building of data warehouses. Research on Biomedical Engineering, v. 31, p. 196-207, 2015.",
+   "doi": "10.1590/2446-4740.0666"
+  },
+  {
+   "texto": "GAZZARATA, R. et al. HL7 Fast Healthcare Interoperability Resources (HL7 FHIR) in digital healthcare ecosystems for chronic disease management: scoping review. International Journal of Medical Informatics, p. 105507, 2024.",
+   "doi": "10.1016/j.ijmedinf.2024.105507"
+  },
+  {
+   "texto": "TED 77/2024 — Transformação Digital do SUS (UFF/FEC/SEIDIGI-MS). Internações hospitalares do SUS no Rio de Janeiro — 2025 (SIH/SUS), base de dados aberta, v1.0.0, 2026.",
+   "url": "https://github.com/RaulAraujoSilva/ted77-sih-rj-dados-abertos"
+  }
  ],
+ "historia": true,
+ "mindmap_tooltips": {
+  "SIH — internações": "Sistema de Informações Hospitalares: registra cada internação via AIH, com diagnóstico, procedimentos, permanência e valores.",
+  "SIA — ambulatório": "Sistema de Informações Ambulatoriais: consultas, exames e procedimentos fora da internação.",
+  "CNES — estabelecimentos": "Cadastro Nacional de Estabelecimentos de Saúde: hospitais, UBS, leitos, equipamentos e profissionais.",
+  "SIM — mortalidade": "Sistema de Informações sobre Mortalidade: declarações de óbito e causas de morte.",
+  "SINASC — nascidos vivos": "Sistema de Informações sobre Nascidos Vivos: nascimentos e condições do parto.",
+  "SINAN — notificações": "Sistema de Agravos de Notificação: doenças de notificação compulsória (dengue, tuberculose etc.).",
+  "Sem ID único de paciente": "Não existe chave que conecte a mesma pessoa entre os sistemas — a maior barreira à análise integrada.",
+  "TabNet = tabelas estáticas": "O tabulador clássico do DATASUS democratizou o acesso, mas entrega só tabelas-resumo, sem interatividade.",
+  "Extração — PySUS / FTP oficial": "Pacote Python de código aberto que baixa os arquivos públicos direto dos servidores do Ministério da Saúde.",
+  "Limpeza — CID-10, duplicidades": "Padronização de códigos de doença e procedimentos, deduplicação e tratamento de valores ausentes.",
+  "Vinculação probabilística — Fellegi-Sunter": "Modelo estatístico que decide se dois registros são da mesma pessoa usando nome, nascimento e localização.",
+  "OLAP — fatos e dimensões": "Arquitetura analítica: tabela fato (eventos) + dimensões (tempo, lugar, especialidade) prontas para cruzamentos rápidos.",
+  "Tendências em minutos, não dias": "Síntese do ganho para o gestor: surtos e mudanças de demanda detectados a tempo de agir.",
+  "Caso real: 926 mil internações RJ-2025": "Demonstração do projeto: um ano inteiro do SIH-RJ processado pelo pipeline e publicado.",
+  "Base aberta + painel públicos": "CSV + dicionário + datapackage no GitHub e painel interativo no portal — tudo CC-BY 4.0.",
+  "OMOP · HL7 FHIR": "Padrões internacionais de dados em saúde que dão interoperabilidade global às bases brasileiras.",
+  "IA preditiva explicável": "Modelos de previsão de tendências e anomalias cujas decisões o gestor consegue entender e auditar."
+ },
  "citacao": {
   "abnt": "TED 77/2024 — TRANSFORMAÇÃO DIGITAL DO SUS (UFF/FEC/SEIDIGI-MS). O tesouro de dados do SUS: como transformar o DATASUS em painéis de gestão (versão de divulgação científica de ALVES et al., Building Health Management Dashboards with DATASUS Public Data, IEEE INDUSCON). Portal de Divulgação Científica do TED 77/2024, 2026. Disponível em: https://ted77-portal.vercel.app/artigos/ind-02/.",
   "bibtex": "@misc{ted77_ind02_2026,\n  title    = {O tesouro de dados do SUS: como transformar o DATASUS em pain\\'eis de gest\\~ao},\n  author   = {{TED 77/2024 — Transforma\\c{c}\\~ao Digital do SUS (UFF/FEC/SEIDIGI-MS)}},\n  year     = {2026},\n  howpublished = {Portal de Divulga\\c{c}\\~ao Cient\\'ifica do TED 77/2024},\n  url      = {https://ted77-portal.vercel.app/artigos/ind-02/},\n  note     = {Vers\\~ao de divulga\\c{c}\\~ao de Alves et al., Building Health Management Dashboards with DATASUS Public Data, IEEE INDUSCON. Licen\\c{c}a CC-BY 4.0}\n}"

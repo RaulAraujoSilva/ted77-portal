@@ -5,6 +5,7 @@ import Quiz from '../../../components/Quiz';
 import MapaMental from '../../../components/MapaMental';
 import Citacao from '../../../components/Citacao';
 import TextoComGlossario from '../../../components/Glossario';
+import AbrirSecao from '../../../components/AbrirSecao';
 
 const BASE = 'https://ted77-portal.vercel.app';
 
@@ -17,7 +18,7 @@ export function generateMetadata({ params }) {
   const capa = capaDe(p);
   return {
     title: `${p.titulo_pt} — TED 77/2024`,
-    description: `${p.titulo_original} — versão de divulgação científica: apostila, vídeo, podcast, fichamento DMAIC, painel interativo e base de dados aberta.`,
+    description: `${p.titulo_original} — versão de divulgação científica: apostila, vídeo, podcast, quiz, mapa mental, painel interativo e base de dados aberta.`,
     openGraph: {
       title: p.titulo_pt,
       description: `Divulgação científica do TED 77/2024 · ${p.tema_nome}`,
@@ -25,7 +26,6 @@ export function generateMetadata({ params }) {
       images: capa ? [{ url: `${BASE}${capa}` }] : [],
       locale: 'pt_BR', type: 'article',
     },
-    // meta acadêmicas (Highwire) — indexação Google Scholar
     other: {
       citation_title: p.titulo_original,
       citation_publication_date: '2026',
@@ -62,12 +62,19 @@ function jsonLd(p, a, l) {
   return itens;
 }
 
-function Cab({ icone, titulo }) {
+function Sec({ id, icone, titulo, meta, children, tipo }) {
   return (
-    <div className="cab">
-      <TipoIcone nome={icone} />
-      <h3>{titulo}</h3>
-    </div>
+    <details className="sec" id={id} data-tipo={tipo}>
+      <summary>
+        <TipoIcone nome={icone} />
+        <span className="sec-titulo">
+          <b>{titulo}</b>
+          <small>{meta}</small>
+        </span>
+        <span className="chevron" aria-hidden="true" />
+      </summary>
+      <div className="sec-corpo">{children}</div>
+    </details>
   );
 }
 
@@ -77,8 +84,27 @@ export default function Artigo({ params }) {
   const l = p.manifest.links;
   const ex = extraDe(p.id);
   const ld = jsonLd(p, a, l);
+  const capa = capaDe(p);
+
+  // central de conteúdos: só o que existe para este artigo
+  const tiles = [
+    a.video && { id: 'sec-video', icone: 'video', nome: 'Vídeo', meta: '3 min' },
+    a.apostila && { id: 'sec-apostila', icone: 'apostila', nome: 'Apostila', meta: 'PDF · 21 págs' },
+    ex?.quiz && { id: 'sec-quiz', icone: 'quiz', nome: 'Quiz', meta: `${ex.quiz.length} perguntas` },
+    ex?.mindmap && { id: 'sec-mapa', icone: 'mapa', nome: 'Mapa mental', meta: 'interativo' },
+    a.podcast && { id: 'sec-podcast', icone: 'podcast', nome: 'Podcast', meta: '6 min' },
+    l?.painel && { id: 'sec-painel', icone: 'painel', nome: 'Painel', meta: 'dados ao vivo' },
+    ex?.historia && { id: null, href: `/artigos/${p.slug}/historia/`, icone: 'historia', nome: 'História visual', meta: '6 passos' },
+    l?.base && { id: 'sec-dados', icone: 'base', nome: 'Base de dados', meta: 'CSV aberto' },
+    (a.fichamento_a3 || a.fichamento_pptx) && { id: 'sec-fichamento', icone: 'fichamento', nome: 'Fichamento', meta: 'A3 + slides' },
+    a.resumo && { id: 'sec-apostila', icone: 'resumo', nome: 'Resumo', meta: 'PDF · 3 págs' },
+    ex?.referencias && { id: 'sec-referencias', icone: 'resumo', nome: 'Referências', meta: `${ex.referencias.length} fontes` },
+    ex?.citacao && { id: 'sec-citar', icone: 'apostila', nome: 'Como citar', meta: 'ABNT · BibTeX' },
+  ].filter(Boolean);
+
   return (
     <main id="conteudo" className="container" data-tema={p.tema}>
+      <AbrirSecao />
       {ld.map((o, i) => (
         <script key={i} type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(o) }} />
@@ -87,23 +113,17 @@ export default function Artigo({ params }) {
         <Link href="/">Início</Link> › <Link href={`/areas/${p.tema.toLowerCase()}/`}>{p.tema_nome}</Link> › <b>{p.id}</b>
       </nav>
 
-      <section className="hot-hero" data-tema={p.tema}>
+      <section className="hot-hero compacto" data-tema={p.tema}>
         <span className="badge claro">{p.tema} · {p.tema_nome}</span>
         <h2>{p.titulo_pt}</h2>
         <p className="orig">{p.titulo_original}</p>
         <p className="autores">{p.fonte} · {p.tipo_estudo} · acervo TED 77/2024 ({p.id})</p>
-        {p.id === 'IND-02' && (
-          <div className="botoes" style={{ marginTop: 'var(--s-4)' }}>
-            <Link className="btn cta" href={`/artigos/${p.slug}/historia/`}>✨ Ver em modo história</Link>
-          </div>
-        )}
       </section>
 
       {ex?.cinco_perguntas && (
         <div className="bloco">
           <h3>Em 5 perguntas</h3>
-          <p className="desc">O essencial do estudo, para quem tem pressa.</p>
-          <div className="ficha5">
+          <div className="ficha5 duas-colunas">
             {ex.cinco_perguntas.map((item, i) => (
               <div className="item" key={i}>
                 <b>{item.q}</b>
@@ -114,127 +134,132 @@ export default function Artigo({ params }) {
         </div>
       )}
 
+      <h3 className="central-titulo" id="central">Tudo deste artigo</h3>
+      <nav className="central" aria-label="Central de conteúdos do artigo">
+        {tiles.map((t, i) =>
+          t.href ? (
+            <Link key={i} href={t.href} className="tile" data-tipo={t.icone}>
+              <TipoIcone nome={t.icone} />
+              <b>{t.nome}</b>
+              <small>{t.meta}</small>
+            </Link>
+          ) : (
+            <a key={i} href={`#${t.id}`} className="tile" data-abre={t.id} data-tipo={t.icone}>
+              <TipoIcone nome={t.icone} />
+              <b>{t.nome}</b>
+              <small>{t.meta}</small>
+            </a>
+          )
+        )}
+      </nav>
+
       {a.video && (
-        <div className="bloco" data-tipo="videos">
-          <Cab icone="video" titulo="Vídeo (3 min)" />
-          <p className="desc">A história do artigo em vídeo, com narração e legendas.</p>
-          <video controls preload="metadata" crossOrigin="anonymous">
+        <Sec id="sec-video" icone="video" tipo="videos" titulo="Vídeo"
+          meta="3 min · MP4 1080p com legendas em português">
+          <video controls preload="none" poster={capa || undefined} crossOrigin="anonymous">
             <source src={a.video} type="video/mp4" />
             {a.legendas && (
               <track kind="captions" src={a.legendas} srcLang="pt-BR" label="Português" default />
             )}
             Seu navegador não suporta vídeo HTML5.
           </video>
-        </div>
+        </Sec>
       )}
 
-      <div className="empilha2">
-        {a.apostila && (
-          <div className="bloco" data-tipo="apostilas">
-            <Cab icone="apostila" titulo="Apostila didática" />
-            <p className="desc">Versão completa para estudo: módulos, boxes, questões com gabarito e glossário (PDF, ~20 págs).</p>
-            <div className="botoes">
-              <a className="btn" href={a.apostila}>Abrir apostila (PDF)</a>
-              {a.resumo && <a className="btn sec" href={a.resumo}>Resumo 3-4 págs (PDF)</a>}
-            </div>
+      {a.apostila && (
+        <Sec id="sec-apostila" icone="apostila" tipo="apostilas" titulo="Apostila e resumo"
+          meta="versão completa para estudo (21 págs) e resumo de 3 páginas">
+          <p className="desc">Módulos didáticos, boxes, questões com gabarito e glossário, no padrão SUS Digital.</p>
+          <div className="botoes">
+            <a className="btn" href={a.apostila} data-evento="download-apostila">Abrir apostila (PDF)</a>
+            {a.resumo && <a className="btn sec" href={a.resumo} data-evento="download-resumo">Resumo 3-4 págs (PDF)</a>}
           </div>
-        )}
-        {(a.fichamento_a3 || a.fichamento_pptx) && (
-          <div className="bloco" data-tipo="fichamentos">
-            <Cab icone="fichamento" titulo="Fichamento DMAIC" />
-            <p className="desc">O artigo em uma página (Relatório A3) e em apresentação, no ciclo Definir-Medir-Analisar-Implementar-Controlar.</p>
-            <div className="botoes">
-              {a.fichamento_a3 && <a className="btn" href={a.fichamento_a3}>Relatório A3 (PDF)</a>}
-              {a.fichamento_pptx && <a className="btn sec" href={a.fichamento_pptx}>Apresentação (PPTX)</a>}
-            </div>
-          </div>
-        )}
-      </div>
-
-      {a.podcast && (
-        <div className="bloco" data-tipo="podcasts">
-          <Cab icone="podcast" titulo="Podcast" />
-          <p className="desc">Áudio-resumo em formato de conversa (Arthur e Carla, ~6 min).</p>
-          <audio controls preload="metadata" src={a.podcast} />
-        </div>
-      )}
-
-      {l.painel && (
-        <div className="bloco" data-tipo="paineis">
-          <Cab icone="painel" titulo="Painel interativo" />
-          <p className="desc">
-            Os dados do artigo, navegáveis: filtros por município e período, mapa do estado e morbidade
-            por capítulo CID-10. <a href={l.painel}>Abrir em tela cheia ↗</a>
-          </p>
-          <iframe
-            className="painel"
-            src={l.painel}
-            title="Painel interativo — Internações SUS-RJ 2025"
-            loading="lazy"
-          />
-        </div>
-      )}
-
-      <div className="empilha2">
-        {l.base && (
-          <div className="bloco" data-tipo="bases">
-            <Cab icone="base" titulo="Base de dados aberta" />
-            <p className="desc">CSV limpos + dicionário de dados + datapackage validado, sob licença CC-BY 4.0.</p>
-            <div className="botoes">
-              <a className="btn" href={l.base}>Acessar no GitHub ↗</a>
-            </div>
-          </div>
-        )}
-        {a.infografico && (
-          <div className="bloco" data-tipo="resumos">
-            <Cab icone="resumo" titulo="Infográfico" />
-            <p className="desc">Síntese visual do pipeline de dados proposto pelo artigo.</p>
-            <img className="minia" src={a.infografico} loading="lazy"
-              alt="Infográfico: pipeline de dados em quatro estações — extração, limpeza, vinculação e OLAP/BI" />
-          </div>
-        )}
-      </div>
-
-      {ex?.mindmap && (
-        <div className="bloco">
-          <h3>🧠 Mapa mental</h3>
-          <p className="desc">A estrutura do artigo em um mapa navegável — clique nos nós para expandir/recolher.</p>
-          <MapaMental markdown={ex.mindmap} titulo={p.titulo_pt} />
-        </div>
+        </Sec>
       )}
 
       {ex?.quiz && (
-        <div className="bloco" id="quiz">
-          <h3>📝 Teste seu conhecimento</h3>
-          <p className="desc">
-            {ex.quiz.length} perguntas com explicação a cada resposta. As que você errar voltam
-            ao fim da fila — conclua todas para ganhar o selo deste artigo.
-          </p>
+        <Sec id="sec-quiz" icone="quiz" tipo="quizzes" titulo="Teste seu conhecimento"
+          meta={`${ex.quiz.length} perguntas com explicação · selo de conclusão`}>
           <Quiz artigoId={p.id} questoes={ex.quiz} titulo={p.titulo_pt} />
-        </div>
+        </Sec>
       )}
 
-      <div className="empilha2">
-        {ex?.citacao && (
-          <div className="bloco">
-            <h3>📖 Como citar</h3>
-            <p className="desc">
-              Conteúdo sob licença CC-BY 4.0 — republique e reutilize com atribuição
-              (política inspirada na Agência FAPESP).
-            </p>
-            <Citacao citacao={ex.citacao} />
+      {ex?.mindmap && (
+        <Sec id="sec-mapa" icone="mapa" tipo="mapas" titulo="Mapa mental"
+          meta="estrutura navegável do artigo · clique para expandir os ramos">
+          <MapaMental markdown={ex.mindmap} titulo={p.titulo_pt} tooltips={ex.mindmap_tooltips} />
+        </Sec>
+      )}
+
+      {a.podcast && (
+        <Sec id="sec-podcast" icone="podcast" tipo="podcasts" titulo="Podcast"
+          meta="áudio-resumo em conversa (Arthur e Carla) · 6 min">
+          <audio controls preload="none" src={a.podcast} />
+          <p className="quiz-nota" style={{ marginTop: 'var(--s-2)' }}>
+            Assine o feed: <a href="/podcast.xml">/podcast.xml</a>
+          </p>
+        </Sec>
+      )}
+
+      {l?.painel && (
+        <Sec id="sec-painel" icone="painel" tipo="paineis" titulo="Painel interativo"
+          meta="dados reais com filtros, mapa do estado e morbidade CID-10">
+          <p className="desc">
+            Filtros por município e período, mapa coroplético e cross-filters.{' '}
+            <a href={l.painel}>Abrir em tela cheia ↗</a>
+          </p>
+          <iframe className="painel" src={l.painel} loading="lazy"
+            title="Painel interativo — Internações SUS-RJ 2025" />
+        </Sec>
+      )}
+
+      {l?.base && (
+        <Sec id="sec-dados" icone="base" tipo="bases" titulo="Base de dados aberta"
+          meta="CSV + dicionário + datapackage validado · CC-BY 4.0">
+          <div className="botoes">
+            <a className="btn" href={l.base}>Repositório no GitHub ↗</a>
+            <Link className="btn sec" href="/dados/">Baixar pelos dados abertos</Link>
           </div>
-        )}
-        {ex?.referencias && (
-          <div className="bloco">
-            <h3>📚 Referências</h3>
-            <p className="desc">Fontes do artigo original e desta versão de divulgação.</p>
-            <ul className="refs-lista">
-              {ex.referencias.map((r, i) => <li key={i}>{r}</li>)}
-            </ul>
+        </Sec>
+      )}
+
+      {(a.fichamento_a3 || a.fichamento_pptx) && (
+        <Sec id="sec-fichamento" icone="fichamento" tipo="fichamentos" titulo="Fichamento DMAIC"
+          meta="o artigo em 1 página (A3) e em apresentação">
+          <div className="botoes">
+            {a.fichamento_a3 && <a className="btn" href={a.fichamento_a3}>Relatório A3 (PDF)</a>}
+            {a.fichamento_pptx && <a className="btn sec" href={a.fichamento_pptx}>Apresentação (PPTX)</a>}
           </div>
-        )}
-      </div>
+        </Sec>
+      )}
+
+      {ex?.referencias && (
+        <Sec id="sec-referencias" icone="resumo" tipo="resumos" titulo="Referências bibliográficas"
+          meta={`${ex.referencias.length} fontes · DOI linkado ao original quando disponível`}>
+          <ul className="refs-lista">
+            {ex.referencias.map((r, i) => (
+              <li key={i}>
+                {r.texto}{' '}
+                {r.doi && (
+                  <a className="doi-badge" href={`https://doi.org/${r.doi}`} rel="noopener">
+                    DOI ↗
+                  </a>
+                )}
+                {!r.doi && r.url && (
+                  <a className="doi-badge cinza" href={r.url} rel="noopener">acessar ↗</a>
+                )}
+              </li>
+            ))}
+          </ul>
+        </Sec>
+      )}
+
+      {ex?.citacao && (
+        <Sec id="sec-citar" icone="apostila" tipo="apostilas" titulo="Como citar"
+          meta="ABNT e BibTeX copiáveis · licença CC-BY 4.0">
+          <Citacao citacao={ex.citacao} />
+        </Sec>
+      )}
 
       <div className="bloco">
         <div className="aviso">

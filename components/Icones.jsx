@@ -27,6 +27,15 @@ export const ICONES = {
   base: (
     <svg {...base}><ellipse cx="12" cy="5.5" rx="8" ry="3" /><path d="M4 5.5v6c0 1.7 3.6 3 8 3s8-1.3 8-3v-6" /><path d="M4 11.5v6c0 1.7 3.6 3 8 3s8-1.3 8-3v-6" /></svg>
   ),
+  quiz: (
+    <svg {...base}><rect x="3" y="3" width="18" height="18" rx="3" /><path d="M9.2 9a2.8 2.8 0 1 1 3.6 2.7c-.8.3-.8.9-.8 1.8" /><circle cx="12" cy="16.8" r=".4" fill="currentColor" /></svg>
+  ),
+  mapa: (
+    <svg {...base}><circle cx="5" cy="12" r="2.2" /><circle cx="18.5" cy="5.5" r="2" /><circle cx="18.5" cy="12" r="2" /><circle cx="18.5" cy="18.5" r="2" /><path d="M7.2 11.3l9.3-5M7.2 12h9.3M7.2 12.7l9.3 5" /></svg>
+  ),
+  historia: (
+    <svg {...base}><path d="M3 19V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v14" /><path d="M3 19a2 2 0 0 0 2 2h16" /><path d="M7 8h10M7 12h6" /><path d="M16.5 15.5l1 2 2 1-2 1-1 2-1-2-2-1 2-1z" /></svg>
+  ),
 };
 
 export function TipoIcone({ nome }) {
