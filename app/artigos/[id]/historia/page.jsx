@@ -16,7 +16,7 @@ export default function PaginaHistoria({ params }) {
   return (
     <main id="conteudo" className="container" data-tema={p.tema}>
       <nav className="crumb" aria-label="Trilha de navegação">
-        <Link href="/">Início</Link> › <Link href={`/artigos/${p.slug}/`}>{p.id}</Link> › <b>Modo história</b>
+        <Link href="/">Início</Link> › <Link href={`/areas/${p.tema.toLowerCase()}/`}>{p.tema_nome}</Link> › <Link href={`/artigos/${p.slug}/`}>{p.id}</Link> › <b>Modo história</b>
       </nav>
       <h2 className="secao" style={{ marginTop: 0 }}>
         <span className="kicker">Narrativa visual · role para avançar</span>

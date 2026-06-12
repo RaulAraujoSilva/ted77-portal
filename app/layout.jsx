@@ -3,6 +3,7 @@ import Link from 'next/link';
 import { Analytics } from '@vercel/analytics/react';
 import { TEMAS } from '../lib/dados';
 import VLibras from '../components/VLibras';
+import NavPrincipal from '../components/NavPrincipal';
 
 export const metadata = {
   title: 'TED 77/2024 · Divulgação Científica — Transformação Digital do SUS',
@@ -33,13 +34,7 @@ export default function RootLayout({ children }) {
               <h1>Divulgação Científica · TED 77/2024</h1>
               <div className="sub">Transformação Digital do SUS · UFF · Ministério da Saúde</div>
             </div>
-            <nav className="principal" aria-label="Navegação principal" accessKey="2">
-              <Link href="/">Início</Link>
-              <Link href="/#areas">Áreas</Link>
-              <Link href="/#artigos">Artigos</Link>
-              <Link href="/#conteudos">Tipos de conteúdo</Link>
-              <Link href="/buscar/" accessKey="3">🔍 Buscar</Link>
-            </nav>
+            <NavPrincipal />
           </div>
         </header>
         {children}

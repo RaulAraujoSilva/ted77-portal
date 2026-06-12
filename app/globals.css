@@ -220,8 +220,13 @@ a.card.pub:hover .thumb img{transform:scale(1.04)}
 .botoes{display:flex;gap:var(--s-3);flex-wrap:wrap}
 
 /* ================= PÁGINA DE ÁREA ================= */
-.crumb{font-size:.82rem;color:var(--rodape);margin:var(--s-4) 0 var(--s-4)}
-.crumb a{text-decoration:none}
+/* trilha de navegação STICKY — orientação e retorno sempre visíveis */
+.crumb{position:sticky;top:0;z-index:80;font-size:.82rem;color:var(--rodape);
+  margin:0 calc(-1*clamp(16px,4vw,24px)) var(--s-4);
+  padding:9px clamp(16px,4vw,24px);
+  background:rgba(255,255,255,.94);backdrop-filter:blur(6px);
+  border-bottom:1px solid var(--borda)}
+.crumb a{text-decoration:none;font-weight:600}
 .crumb b{color:var(--tinta)}
 .area-hero{background:var(--a-pastel);border-left:6px solid var(--a-cor);
   border-radius:var(--r-3);padding:var(--s-5);margin-bottom:var(--s-5)}
