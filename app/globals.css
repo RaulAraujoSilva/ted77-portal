@@ -138,6 +138,17 @@ a.card.pub:hover .thumb img{transform:scale(1.04)}
 .card.pub .orig{font-size:.8rem;color:var(--rodape);font-style:italic}
 .card.pub .meta{margin-top:auto;padding-top:var(--s-2);display:flex;gap:var(--s-2);flex-wrap:wrap}
 
+/* placeholder compacto (artigos em produção, home) */
+.gmini{grid-template-columns:repeat(auto-fill,minmax(min(225px,100%),1fr));gap:var(--s-2)}
+.card.mini{flex-direction:column;gap:3px;padding:var(--s-2) var(--s-3);
+  border:1.5px dashed var(--a-borda,var(--borda));border-left:4px solid var(--a-cor,var(--borda));
+  background:var(--off);box-shadow:none}
+.card.mini:hover{transform:none;box-shadow:none}
+.card.mini .sigla-mini{font-size:.68rem;font-weight:800;letter-spacing:.5px;color:var(--a-texto,var(--rodape))}
+.card.mini b{font-size:.8rem;color:var(--cinza);line-height:1.3;font-weight:600;
+  display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.card.mini small{font-size:.68rem;color:var(--rodape);font-style:italic}
+
 /* estado EM PRODUÇÃO */
 .card.draft{border:1.5px dashed var(--borda);background:var(--off);box-shadow:none}
 .card.draft .thumb{filter:grayscale(1);opacity:.55}

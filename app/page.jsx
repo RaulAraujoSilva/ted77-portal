@@ -72,13 +72,22 @@ export default function Home() {
         <h2 className="secao" id="artigos"><span className="kicker">Explorar por artigo</span>Hotsites dos artigos</h2>
         <p className="lead">Cada artigo ganha um hotsite com todos os seus conteúdos. Já publicado:</p>
         <FiltroLista alvo="grade-artigos" areas={TEMAS} placeholder="Filtrar por título, sigla ou tema…" />
-        <div className="grid g3" id="grade-artigos">
-          {prontos.map((p) => <CardPub key={p.id} p={p} />)}
-          <div className="card draft" data-tema="T1">
-            <div className="card-body">
-              <span className="badge draft">Em produção</span>
-              <h3>Os demais 42 artigos entram no ar em ondas, conforme o cronograma editorial.</h3>
-            </div>
+        <div id="grade-artigos">
+          <div className="grid g3">
+            {prontos.map((p) => <CardPub key={p.id} p={p} />)}
+          </div>
+          <p className="lead" style={{ margin: 'var(--s-4) 0 var(--s-2)', fontSize: '.85rem' }}>
+            Em produção — entram no ar em ondas, conforme o cronograma editorial:
+          </p>
+          <div className="grid gmini">
+            {PUBLICACOES.filter((p) => !p.manifest).map((p) => (
+              <div key={p.id} className="card mini" data-tema={p.tema}
+                data-busca={`${p.id} ${p.titulo_pt} ${p.titulo_original} ${p.tema_nome} ${p.fonte}`}>
+                <span className="sigla-mini">{p.id}</span>
+                <b>{p.titulo_pt}</b>
+                <small>em produção</small>
+              </div>
+            ))}
           </div>
         </div>
 
