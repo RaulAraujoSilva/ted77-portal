@@ -109,8 +109,12 @@ export default function Artigo({ params }) {
       <section className="hot-hero compacto" data-tema={p.tema}>
         <span className="badge claro">{p.tema} · {p.tema_nome}</span>
         <h2>{p.titulo_pt}</h2>
-        <p className="orig">{p.titulo_original}</p>
-        <p className="autores">{p.fonte} · {p.tipo_estudo} · acervo TED 77/2024 ({p.id})</p>
+        {ex?.cinco_perguntas?.[0] && (
+          <p className="hero-resumo">{ex.cinco_perguntas[0].a}</p>
+        )}
+        <p className="autores">
+          <i>{p.titulo_original}</i> · {p.fonte} · {p.tipo_estudo} · acervo TED 77/2024 ({p.id})
+        </p>
       </section>
 
       {/* ====== AUDIOVISUAL (roxo) — ordem alfabética ====== */}

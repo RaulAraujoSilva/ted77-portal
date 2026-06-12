@@ -282,8 +282,10 @@ img.minia{width:100%;border-radius:var(--r-1);border:1px solid var(--borda)}
 .refs-lista li{padding-left:var(--s-4);text-indent:calc(-1 * var(--s-4))}
 
 /* ================= HUB DO HOTSITE ================= */
-.hot-hero.compacto{padding:var(--s-5)}
-.hot-hero.compacto h2{font-size:var(--fs-h2);margin-top:var(--s-2)}
+.hot-hero.compacto{padding:var(--s-4) var(--s-5)}
+.hot-hero.compacto h2{font-size:var(--fs-h2);margin-top:var(--s-1)}
+.hot-hero.compacto .autores{margin-top:var(--s-2)}
+.hero-resumo{margin-top:var(--s-2);color:#E8EFFA;font-size:.95rem;max-width:900px;line-height:1.45}
 .ficha5.duas-colunas{grid-template-columns:1fr 1fr}
 .ficha5.duas-colunas .item:first-child{grid-column:1 / -1}
 @media(max-width:900px){.ficha5.duas-colunas{grid-template-columns:1fr}}
@@ -298,33 +300,41 @@ img.minia{width:100%;border-radius:var(--r-1);border:1px solid var(--borda)}
 .grupo-cab::before{content:"";width:14px;height:14px;border-radius:4px;background:var(--g-cor);
   align-self:center}
 .grupo-cab small{font-weight:600;letter-spacing:0;text-transform:none;color:var(--rodape)}
-.sec-link{display:flex;align-items:center;gap:var(--s-3);padding:var(--s-3) var(--s-4);
+.sec-link{display:flex;align-items:center;gap:var(--s-3);padding:9px var(--s-4);
   background:#fff;border:1px solid var(--borda);border-left:5px solid var(--g-cor);
   border-radius:var(--r-2);margin-top:var(--s-2);box-shadow:var(--sombra-1);
   text-decoration:none;color:inherit;
   transition:transform var(--dur) var(--ease),box-shadow var(--dur) var(--ease)}
 .sec-link:hover{transform:translateY(-1px);box-shadow:var(--sombra-2)}
 .sec-link .seta-link{margin-left:auto;font-weight:800;color:var(--g-cor)}
-.sec-link .sec-titulo{display:flex;flex-direction:column;min-width:0}
-.sec-link .sec-titulo b{color:var(--azul);font-size:1rem}
-.sec-link .sec-titulo small{color:var(--rodape);font-size:.8rem}
 
 details.sec{background:#fff;border:1px solid var(--borda);border-left:5px solid var(--g-cor,var(--borda));
   border-radius:var(--r-2);margin-top:var(--s-2);box-shadow:var(--sombra-1);overflow:hidden}
 details.sec summary .tipo-ico,.sec-link .tipo-ico{background:var(--g-pastel,var(--neutro))}
-details.sec summary{display:flex;align-items:center;gap:var(--s-3);padding:var(--s-3) var(--s-4);
+details.sec summary{display:flex;align-items:center;gap:var(--s-3);padding:9px var(--s-4);
   cursor:pointer;list-style:none;user-select:none}
 details.sec summary::-webkit-details-marker{display:none}
 details.sec summary:hover{background:var(--off)}
-details.sec .sec-titulo{display:flex;flex-direction:column;min-width:0}
-details.sec .sec-titulo b{color:var(--azul);font-size:1rem}
-details.sec .sec-titulo small{color:var(--rodape);font-size:.8rem}
-details.sec .chevron{margin-left:auto;width:11px;height:11px;border-right:2.5px solid var(--rodape);
+/* 1 linha: título e descrição lado a lado; descrição trunca se faltar espaço */
+.sec-titulo{display:flex;flex-direction:row!important;align-items:baseline;gap:var(--s-2);
+  min-width:0;flex:1}
+.sec-titulo b{color:var(--azul);font-size:.98rem;white-space:nowrap}
+.sec-titulo small{color:var(--rodape);font-size:.8rem;white-space:nowrap;overflow:hidden;
+  text-overflow:ellipsis;min-width:0}
+.sec-titulo small::before{content:"· ";color:var(--borda)}
+details.sec .chevron{margin-left:auto;width:10px;height:10px;border-right:2.5px solid var(--rodape);
   border-bottom:2.5px solid var(--rodape);transform:rotate(45deg);
   transition:transform var(--dur) var(--ease);flex:0 0 auto}
 details.sec[open] .chevron{transform:rotate(225deg)}
 details.sec .sec-corpo{padding:var(--s-2) var(--s-4) var(--s-5)}
-details.sec summary .tipo-ico{width:38px;height:38px}
+/* ícone compacto: retângulo de 1 linha na cor do grupo */
+details.sec summary .tipo-ico,.sec-link .tipo-ico{width:30px;height:24px;border-radius:6px;margin:0}
+details.sec summary .tipo-ico svg,.sec-link .tipo-ico svg{width:15px;height:15px}
+@media(max-width:700px){
+  .sec-titulo{flex-direction:column!important;gap:0}
+  .sec-titulo b,.sec-titulo small{white-space:normal}
+  .sec-titulo small::before{content:""}
+}
 .doi-badge{display:inline-block;font-size:.72rem;font-weight:700;text-decoration:none;
   background:var(--tint);color:var(--govbr);border:1px solid #B9CCE8;border-radius:999px;
   padding:1px 9px;white-space:nowrap}
