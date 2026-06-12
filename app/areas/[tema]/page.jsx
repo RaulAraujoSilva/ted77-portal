@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import { TEMAS, porTema, publicadosPorTema, capaDe } from '../../../lib/dados';
 import ProgressoArea from '../../../components/ProgressoArea';
+import FiltroLista from '../../../components/FiltroLista';
 
 export function generateStaticParams() {
   return TEMAS.map((t) => ({ tema: t.id }));
@@ -29,7 +30,8 @@ export default function Area({ params }) {
         <ProgressoArea ids={pubs.map((p) => p.id)} />
       </header>
 
-      <div className="grid g3">
+      <FiltroLista alvo="grade-area" placeholder="Filtrar artigos desta área…" />
+      <div className="grid g3" id="grade-area">
         {pubs.map((p) => {
           const capa = capaDe(p);
           const thumb = (
@@ -54,12 +56,14 @@ export default function Area({ params }) {
               </div>
             </div>
           );
+          const busca = `${p.id} ${p.titulo_pt} ${p.titulo_original} ${p.tipo_estudo} ${p.fonte}`;
           return p.manifest ? (
-            <Link key={p.id} href={`/artigos/${p.slug}/`} className="card pub" data-tema={p.tema}>
+            <Link key={p.id} href={`/artigos/${p.slug}/`} className="card pub"
+              data-tema={p.tema} data-busca={busca}>
               {thumb}{corpo}
             </Link>
           ) : (
-            <div key={p.id} className="card pub draft" data-tema={p.tema}>
+            <div key={p.id} className="card pub draft" data-tema={p.tema} data-busca={busca}>
               {thumb}{corpo}
             </div>
           );

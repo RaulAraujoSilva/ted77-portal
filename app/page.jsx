@@ -1,11 +1,13 @@
 import Link from 'next/link';
 import { TEMAS, PUBLICACOES, TIPOS, porTema, capaDe } from '../lib/dados';
 import { TipoIcone } from '../components/Icones';
+import FiltroLista from '../components/FiltroLista';
 
 function CardPub({ p }) {
   const capa = capaDe(p);
   return (
-    <Link href={`/artigos/${p.slug}/`} className="card pub" data-tema={p.tema}>
+    <Link href={`/artigos/${p.slug}/`} className="card pub" data-tema={p.tema}
+      data-busca={`${p.id} ${p.titulo_pt} ${p.titulo_original} ${p.tema_nome} ${p.fonte}`}>
       <figure className="thumb">
         {capa ? (
           <img src={capa} alt="" loading="lazy" width="1536" height="1024" />
@@ -69,7 +71,8 @@ export default function Home() {
 
         <h2 className="secao" id="artigos"><span className="kicker">Explorar por artigo</span>Hotsites dos artigos</h2>
         <p className="lead">Cada artigo ganha um hotsite com todos os seus conteúdos. Já publicado:</p>
-        <div className="grid g3">
+        <FiltroLista alvo="grade-artigos" areas={TEMAS} placeholder="Filtrar por título, sigla ou tema…" />
+        <div className="grid g3" id="grade-artigos">
           {prontos.map((p) => <CardPub key={p.id} p={p} />)}
           <div className="card draft" data-tema="T1">
             <div className="card-body">

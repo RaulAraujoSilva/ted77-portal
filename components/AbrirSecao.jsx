@@ -1,29 +1,35 @@
 'use client';
-// Hub do hotsite: tiles abrem o <details> correspondente e rolam até ele;
-// chegar com #sec-... na URL também abre a seção.
+// Garante TUDO recolhido por padrão (inclusive em back/refresh via bfcache) e
+// abre apenas a seção apontada por #sec-... na URL (deep link deliberado).
 import { useEffect } from 'react';
 
 export default function AbrirSecao() {
   useEffect(() => {
-    const abrir = (id, rolar = true) => {
-      const det = document.getElementById(id);
-      if (!det) return;
-      det.open = true;
-      if (rolar) det.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    const fecharTodos = () =>
+      document.querySelectorAll('details.sec').forEach((d) => { d.open = false; });
+
+    const aplicar = () => {
+      fecharTodos();
+      let alvo = location.hash.startsWith('#sec-') ? location.hash.slice(1) : null;
+      if (location.hash === '#quiz') alvo = 'sec-quiz'; // compat com links antigos
+      if (alvo) {
+        const det = document.getElementById(alvo);
+        if (det) {
+          det.open = true;
+          det.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+      }
     };
-    // tiles → seções
-    document.querySelectorAll('[data-abre]').forEach((tile) => {
-      tile.addEventListener('click', (e) => {
-        const id = tile.dataset.abre;
-        if (id) { e.preventDefault(); abrir(id); history.replaceState(null, '', `#${id}`); }
-      });
-    });
-    // hash inicial
-    if (location.hash.startsWith('#sec-')) {
-      setTimeout(() => abrir(location.hash.slice(1)), 150);
-    }
-    // compat: link antigo #quiz
-    if (location.hash === '#quiz') setTimeout(() => abrir('sec-quiz'), 150);
+
+    aplicar();
+    // bfcache (voltar/avançar) restaura o DOM como estava — reimpor o padrão
+    const aoExibir = (e) => { if (e.persisted) aplicar(); };
+    window.addEventListener('pageshow', aoExibir);
+    window.addEventListener('hashchange', aplicar);
+    return () => {
+      window.removeEventListener('pageshow', aoExibir);
+      window.removeEventListener('hashchange', aplicar);
+    };
   }, []);
   return null;
 }
