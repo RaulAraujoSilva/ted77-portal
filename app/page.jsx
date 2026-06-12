@@ -27,7 +27,6 @@ function CardPub({ p }) {
 
 export default function Home() {
   const prontos = PUBLICACOES.filter((p) => p.manifest);
-  const capaHero = capaDe(prontos[0]);
   return (
     <main id="conteudo">
       <section className="hero">
@@ -45,18 +44,13 @@ export default function Home() {
               <a className="btn cta" href="#areas">Explorar as 6 áreas</a>
               <Link className="btn ghost" href={`/artigos/${prontos[0].slug}/`}>Ver o hotsite piloto</Link>
             </div>
-            <div className="num">
-              <div><b>43</b> publicações</div>
-              <div><b>6</b> áreas temáticas</div>
-              <div><b>7</b> formatos</div>
-              <div><b>100%</b> aberto</div>
-            </div>
           </div>
-          {capaHero && (
-            <div className="amostra">
-              <img src={capaHero} alt="Infográfico de exemplo do acervo: mapa do percurso em quatro módulos" />
-            </div>
-          )}
+          <div className="num">
+            <div><b>43</b> publicações</div>
+            <div><b>6</b> áreas temáticas</div>
+            <div><b>7</b> formatos</div>
+            <div><b>100%</b> aberto</div>
+          </div>
         </div>
       </section>
 
@@ -91,9 +85,11 @@ export default function Home() {
           {TIPOS.map((t) => (
             <Link key={t.id} href={`/conteudos/${t.id}/`} className="card tipo" data-tipo={t.id}>
               <TipoIcone nome={t.icone} />
-              <h3>{t.nome}</h3>
-              <p>{t.desc}</p>
-              <span className="qtd">ver galeria →</span>
+              <div className="t-corpo">
+                <h3>{t.nome}</h3>
+                <p>{t.desc}</p>
+                <span className="qtd">ver galeria →</span>
+              </div>
             </Link>
           ))}
         </div>
