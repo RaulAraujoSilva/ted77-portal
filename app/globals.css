@@ -138,6 +138,21 @@ a.card.pub:hover .thumb img{transform:scale(1.04)}
 .card.pub .orig{font-size:.8rem;color:var(--rodape);font-style:italic}
 .card.pub .meta{margin-top:auto;padding-top:var(--s-2);display:flex;gap:var(--s-2);flex-wrap:wrap}
 
+/* DESTAQUES (home) — card horizontal compacto, escala de 1 a 3 publicados */
+.destaques{display:grid;gap:var(--s-3);grid-template-columns:repeat(auto-fit,minmax(min(460px,100%),1fr));margin-bottom:var(--s-3)}
+.destaques .card.pub{flex-direction:row;align-items:stretch;max-width:760px}
+.destaques .card.pub .thumb{aspect-ratio:auto;width:218px;flex:0 0 218px;
+  border-radius:var(--r-2) 0 0 var(--r-2);border-right:1px solid var(--borda)}
+.destaques .card.pub .thumb img{object-fit:cover;object-position:top}
+.destaques .card-body{padding:var(--s-3) var(--s-4)}
+.destaques .card.pub h3{font-size:1.05rem}
+.destaques .card.pub .orig{display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+@media(max-width:560px){
+  .destaques .card.pub{flex-direction:column}
+  .destaques .card.pub .thumb{width:100%;flex:initial;aspect-ratio:16/7;
+    border-radius:var(--r-2) var(--r-2) 0 0;border-right:0;border-bottom:1px solid var(--borda)}
+}
+
 /* placeholder compacto (artigos em produção, home) */
 .gmini{grid-template-columns:repeat(auto-fill,minmax(min(225px,100%),1fr));gap:var(--s-2)}
 .card.mini{flex-direction:column;gap:3px;padding:var(--s-2) var(--s-3);
@@ -148,6 +163,12 @@ a.card.pub:hover .thumb img{transform:scale(1.04)}
 .card.mini b{font-size:.8rem;color:var(--cinza);line-height:1.3;font-weight:600;
   display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
 .card.mini small{font-size:.68rem;color:var(--rodape);font-style:italic}
+/* variante publicada: mesmo tamanho, estado "vivo" */
+.card.mini.ativo{background:#fff;border:1px solid var(--a-borda);
+  border-left:4px solid var(--a-cor);box-shadow:var(--sombra-1);text-decoration:none;color:inherit}
+.card.mini.ativo b{color:var(--azul)}
+.card.mini.ativo:hover{transform:translateY(-2px);box-shadow:var(--sombra-2)}
+.card.mini .no-ar{color:var(--verde);font-weight:700;font-style:normal}
 
 /* estado EM PRODUÇÃO */
 .card.draft{border:1.5px dashed var(--borda);background:var(--off);box-shadow:none}

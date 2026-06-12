@@ -70,25 +70,33 @@ export default function Home() {
         </div>
 
         <h2 className="secao" id="artigos"><span className="kicker">Explorar por artigo</span>Hotsites dos artigos</h2>
-        <p className="lead">Cada artigo ganha um hotsite com todos os seus conteúdos. Já publicado:</p>
+        <p className="lead">Em destaque — já no ar com todos os conteúdos:</p>
+        <div className="destaques">
+          {prontos.slice(0, 3).map((p) => <CardPub key={p.id} p={p} />)}
+        </div>
+
+        <p className="lead" style={{ margin: 'var(--s-5) 0 var(--s-2)' }}>
+          Acervo completo — {PUBLICACOES.length} artigos (os demais entram no ar em ondas):
+        </p>
         <FiltroLista alvo="grade-artigos" areas={TEMAS} placeholder="Filtrar por título, sigla ou tema…" />
-        <div id="grade-artigos">
-          <div className="grid g3">
-            {prontos.map((p) => <CardPub key={p.id} p={p} />)}
-          </div>
-          <p className="lead" style={{ margin: 'var(--s-4) 0 var(--s-2)', fontSize: '.85rem' }}>
-            Em produção — entram no ar em ondas, conforme o cronograma editorial:
-          </p>
-          <div className="grid gmini">
-            {PUBLICACOES.filter((p) => !p.manifest).map((p) => (
-              <div key={p.id} className="card mini" data-tema={p.tema}
-                data-busca={`${p.id} ${p.titulo_pt} ${p.titulo_original} ${p.tema_nome} ${p.fonte}`}>
+        <div className="grid gmini" id="grade-artigos">
+          {PUBLICACOES.map((p) => {
+            const busca = `${p.id} ${p.titulo_pt} ${p.titulo_original} ${p.tema_nome} ${p.fonte}`;
+            return p.manifest ? (
+              <Link key={p.id} href={`/artigos/${p.slug}/`} className="card mini ativo"
+                data-tema={p.tema} data-busca={busca}>
+                <span className="sigla-mini">{p.id}</span>
+                <b>{p.titulo_pt}</b>
+                <small className="no-ar">✓ no ar — abrir hotsite</small>
+              </Link>
+            ) : (
+              <div key={p.id} className="card mini" data-tema={p.tema} data-busca={busca}>
                 <span className="sigla-mini">{p.id}</span>
                 <b>{p.titulo_pt}</b>
                 <small>em produção</small>
               </div>
-            ))}
-          </div>
+            );
+          })}
         </div>
 
         <h2 className="secao" id="comece"><span className="kicker">Comece por aqui</span>Trilhas por perfil</h2>
