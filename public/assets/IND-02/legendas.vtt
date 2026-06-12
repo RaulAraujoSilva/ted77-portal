@@ -17,85 +17,85 @@ Mas esse tesouro está trancado.
 Neste vídeo. você vai conhecer o mapa para destrancá-lo.
 
 5
-00:00:25.243 --> 00:00:29.829
+00:00:24.333 --> 00:00:28.919
 Tudo começa no DATASUS. o departamento de informática do SUS.
 
 6
-00:00:30.003 --> 00:00:43.668
+00:00:29.093 --> 00:00:42.758
 Ele reúne o Sistema de Internações Hospitalares. o de Atendimentos Ambulatoriais. o Cadastro de Estabelecimentos. e os registros de Mortalidade. Nascidos Vivos e Doenças de Notificação.
 
 7
-00:00:43.993 --> 00:00:49.810
+00:00:43.083 --> 00:00:48.900
 Cada um foi criado para uma finalidade específica — e é aí que mora o problema.
 
 8
-00:00:50.710 --> 00:00:53.450
+00:00:49.800 --> 00:00:52.540
 Esses sistemas não conversam entre si.
 
 9
-00:00:53.775 --> 00:01:00.660
+00:00:52.865 --> 00:00:59.750
 Cada um usa formatos e códigos próprios. e não existe um identificador único de paciente.
 
 10
-00:01:00.869 --> 00:01:07.243
+00:00:59.959 --> 00:01:06.333
 Na prática. é impossível ligar automaticamente uma consulta à internação que veio depois.
 
 11
-00:01:07.684 --> 00:01:14.905
+00:01:06.774 --> 00:01:13.995
 A trajetória do paciente se perde — e o gestor enxerga apenas fragmentos. em tabelas estáticas.
 
 12
-00:01:15.810 --> 00:01:19.514
+00:01:14.900 --> 00:01:18.604
 A boa notícia: existe um caminho. e ele é aberto.
 
 13
-00:01:19.665 --> 00:01:29.045
+00:01:18.755 --> 00:01:28.135
 Primeiro. ferramentas gratuitas como o PySUS — um pacote Python de código aberto — baixam os dados direto dos servidores oficiais.
 
 14
-00:01:29.220 --> 00:01:36.696
+00:01:28.310 --> 00:01:35.786
 Depois. vem a limpeza: padronizar códigos. eliminar duplicidades. tratar valores ausentes.
 
 15
-00:01:36.870 --> 00:01:52.358
+00:01:35.960 --> 00:01:51.448
 O passo decisivo é a vinculação probabilística de registros. que usa nome. data de nascimento e localização para reconectar as pontas — uma técnica já aplicada a centenas de milhões de registros no Brasil.
 
 16
-00:01:52.509 --> 00:01:59.556
+00:01:51.599 --> 00:01:58.646
 Por fim. os dados organizados alimentam um armazém analítico. pronto para perguntas complexas.
 
 17
-00:02:00.457 --> 00:02:09.849
+00:01:59.546 --> 00:02:08.938
 E o resultado é este painel — construído por este projeto. com a metodologia do artigo. sobre dados reais e públicos do DATASUS.
 
 18
-00:02:09.966 --> 00:02:15.852
+00:02:09.055 --> 00:02:14.941
 Em poucos cliques: internações por município. valores. tendências mês a mês.
 
 19
-00:02:15.980 --> 00:02:21.297
+00:02:15.069 --> 00:02:20.386
 O que antes exigia dias montando tabelas. agora se explora em minutos.
 
 20
-00:02:21.471 --> 00:02:25.952
+00:02:20.560 --> 00:02:25.041
 E ele está disponível. aberto. no portal do projeto.
 
 21
-00:02:26.857 --> 00:02:33.533
+00:02:25.946 --> 00:02:32.622
 Para o gestor. isso significa detectar surtos e mudanças no uso dos serviços a tempo de agir.
 
 22
-00:02:33.742 --> 00:02:45.201
+00:02:32.831 --> 00:02:44.290
 Para a sociedade. significa transparência: os mesmos dados que sustentam a decisão pública ficam abertos para qualquer pesquisador — ou qualquer cidadão — conferir.
 
 23
-00:02:46.100 --> 00:02:54.935
+00:02:45.190 --> 00:02:54.025
 Este vídeo faz parte da série de divulgação científica do TED setenta e sete. uma parceria da UFF com o Ministério da Saúde.
 
 24
-00:02:55.179 --> 00:03:01.286
+00:02:54.269 --> 00:03:00.376
 O artigo completo. a base de dados e o painel interativo estão no portal do projeto.
 
 25
-00:03:01.460 --> 00:03:08.670
+00:03:00.550 --> 00:03:07.760
 Explore. reutilize e compartilhe — o dado é público. e o conhecimento também deve ser.
