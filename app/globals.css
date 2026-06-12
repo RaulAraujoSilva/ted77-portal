@@ -412,15 +412,6 @@ details.sec summary .tipo-ico svg,.sec-link .tipo-ico svg{width:15px;height:15px
 .scrolly .passo p{font-size:.92rem;color:var(--cinza)}
 .barra-mes{transition:fill var(--dur-2) var(--ease),opacity var(--dur-2) var(--ease)}
 
-/* ================= TRILHAS POR PERSONA ================= */
-.trilhas{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(290px,100%),1fr));gap:var(--s-4)}
-.trilha{background:#fff;border:1px solid var(--borda);border-radius:var(--r-2);padding:var(--s-4);
-  border-top:6px solid var(--govbr)}
-.trilha h3{color:var(--azul);font-size:1rem;margin-bottom:2px}
-.trilha .quem{font-size:.8rem;color:var(--rodape);margin-bottom:var(--s-3)}
-.trilha ol{padding-left:var(--s-5);font-size:.88rem;color:var(--cinza);display:grid;gap:6px}
-.trilha a{font-weight:600}
-
 /* ================= FOOTER ================= */
 footer.rodape{background:#fff;border-top:1px solid var(--borda);padding:var(--s-4) 0;margin-top:var(--s-6)}
 footer.rodape .linha{display:flex;align-items:center;gap:var(--s-5);flex-wrap:wrap}
