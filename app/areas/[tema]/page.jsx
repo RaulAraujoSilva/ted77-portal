@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import { TEMAS, porTema, publicadosPorTema, capaDe } from '../../../lib/dados';
+import ProgressoArea from '../../../components/ProgressoArea';
 
 export function generateStaticParams() {
   return TEMAS.map((t) => ({ tema: t.id }));
@@ -25,6 +26,7 @@ export default function Area({ params }) {
         <h2>{t.nome}</h2>
         <p>{t.desc}</p>
         <div className="stats">{pubs.length} publicações · {noAr} já no ar</div>
+        <ProgressoArea ids={pubs.map((p) => p.id)} />
       </header>
 
       <div className="grid g3">

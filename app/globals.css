@@ -230,6 +230,94 @@ img.minia{width:100%;border-radius:var(--r-1);border:1px solid var(--borda)}
 .vazio .tipo-ico{width:64px;height:64px}
 .vazio .tipo-ico svg{width:30px;height:30px}
 
+/* ================= FICHA 5 PERGUNTAS ================= */
+.ficha5{display:grid;gap:var(--s-3);margin-top:var(--s-4)}
+.ficha5 .item{background:#fff;border:1px solid var(--borda);border-left:5px solid var(--a-cor,var(--azul));
+  border-radius:var(--r-1);padding:var(--s-3) var(--s-4)}
+.ficha5 .item b{display:block;color:var(--a-texto,var(--azul));font-size:.82rem;
+  text-transform:uppercase;letter-spacing:.5px;margin-bottom:2px}
+.ficha5 .item p{font-size:.92rem;color:var(--cinza)}
+
+/* ================= QUIZ ================= */
+.quiz-topo{display:flex;align-items:center;gap:var(--s-3);font-size:.8rem;color:var(--rodape);
+  margin-bottom:var(--s-3);font-weight:700}
+.quiz-barra{flex:1;height:8px;background:var(--neutro);border-radius:99px;overflow:hidden}
+.quiz-barra span{display:block;height:100%;background:var(--verde);border-radius:99px;
+  transition:width var(--dur-2) var(--ease)}
+.quiz-pergunta{font-weight:700;font-size:1.02rem;margin-bottom:var(--s-3)}
+.quiz-alts{display:grid;gap:var(--s-2)}
+.quiz-alt{font:inherit;text-align:left;background:#fff;border:2px solid var(--borda);
+  border-radius:var(--r-1);padding:var(--s-3) var(--s-4);cursor:pointer;
+  transition:border-color var(--dur) var(--ease),background var(--dur) var(--ease)}
+.quiz-alt:hover:not(:disabled){border-color:var(--govbr);background:var(--tint)}
+.quiz-alt b{color:var(--azul);margin-right:4px}
+.quiz-alt.certa{border-color:var(--verde);background:#EAF5EC}
+.quiz-alt.errada{border-color:var(--verm);background:#FBEAEA}
+.quiz-alt.apagada{opacity:.55}
+.quiz-feedback{margin-top:var(--s-3);border-radius:var(--r-1);padding:var(--s-3) var(--s-4);font-size:.92rem}
+.quiz-feedback.ok{background:#EAF5EC;border-left:5px solid var(--verde)}
+.quiz-feedback.nao{background:#FFF7DD;border-left:5px solid var(--amarelo-esc)}
+.quiz-feedback i{display:block;color:var(--rodape);margin-top:4px;font-size:.84rem}
+.quiz-feedback .btn{margin-top:var(--s-3)}
+.quiz-fim{text-align:center;padding:var(--s-4)}
+.quiz-fim .selo-ok{width:64px;height:64px;border-radius:50%;background:var(--verde);color:#fff;
+  font-size:2rem;font-weight:800;display:flex;align-items:center;justify-content:center;
+  margin:0 auto var(--s-3)}
+.quiz-fim h4{color:var(--verde);font-size:1.2rem;margin-bottom:var(--s-2)}
+.quiz-fim .btn{margin-top:var(--s-3)}
+.quiz-nota{font-size:.8rem;color:var(--rodape)}
+.progresso-area{display:inline-block;font-size:.84rem;font-weight:700;color:var(--verde);
+  background:#EAF5EC;border:1px solid #B9DFBE;border-radius:999px;padding:4px 12px;margin-top:var(--s-2)}
+
+/* ================= MAPA MENTAL / CITAÇÃO ================= */
+.mapa-mental-caixa{width:100%;border:1px solid var(--borda);border-radius:var(--r-1);background:#fff;overflow:hidden}
+.mapa-mental-caixa svg{width:100%;height:440px;display:block}
+.mapa-texto{margin-top:var(--s-2)}
+.mapa-texto summary{cursor:pointer;font-size:.84rem;color:var(--govbr);font-weight:700}
+.mapa-texto pre{background:var(--off);border:1px solid var(--borda);border-radius:var(--r-1);
+  padding:var(--s-3);font-size:.8rem;overflow-x:auto;white-space:pre-wrap;margin-top:var(--s-2)}
+.cit-texto{font-size:.88rem;background:var(--off);border:1px solid var(--borda);
+  border-radius:var(--r-1);padding:var(--s-3) var(--s-4);margin-bottom:var(--s-3)}
+.refs-lista{font-size:.86rem;color:var(--cinza);padding-left:0;list-style:none;display:grid;gap:var(--s-2)}
+.refs-lista li{padding-left:var(--s-4);text-indent:calc(-1 * var(--s-4))}
+
+/* ================= GLOSSÁRIO HOVER ================= */
+.glos{position:relative;border-bottom:2px dotted var(--govbr);cursor:help;font-weight:600;color:var(--govbr)}
+.glos .glos-tip{visibility:hidden;opacity:0;position:absolute;left:50%;bottom:calc(100% + 8px);
+  transform:translateX(-50%);width:min(290px,72vw);background:var(--tinta);color:#fff;
+  font-size:.8rem;font-weight:400;line-height:1.45;padding:10px 12px;border-radius:8px;
+  z-index:30;transition:opacity var(--dur) var(--ease);pointer-events:none;text-indent:0}
+.glos .glos-tip::after{content:"";position:absolute;top:100%;left:50%;transform:translateX(-50%);
+  border:7px solid transparent;border-top-color:var(--tinta)}
+.glos:hover .glos-tip,.glos:focus .glos-tip,.glos:focus-visible .glos-tip{visibility:visible;opacity:1}
+
+/* ================= SCROLLYTELLING ================= */
+.scrolly{display:grid;grid-template-columns:1fr 1.1fr;gap:var(--s-6);align-items:start}
+@media(max-width:880px){.scrolly{grid-template-columns:1fr}}
+.scrolly .grafico-fixo{position:sticky;top:80px;background:#fff;border:1px solid var(--borda);
+  border-radius:var(--r-2);padding:var(--s-4);box-shadow:var(--sombra-2)}
+.scrolly .grafico-fixo h4{color:var(--azul);font-size:1rem;margin-bottom:var(--s-2);
+  transition:opacity var(--dur-2) var(--ease)}
+.scrolly .grafico-fixo svg{width:100%;height:auto}
+.scrolly .passos{display:flex;flex-direction:column;gap:55vh;padding:30vh 0 40vh}
+.scrolly .passo{background:#fff;border:1px solid var(--borda);border-left:6px solid var(--azul);
+  border-radius:var(--r-2);padding:var(--s-4) var(--s-5);box-shadow:var(--sombra-1);
+  opacity:.45;transition:opacity var(--dur-2) var(--ease)}
+.scrolly .passo.ativo{opacity:1;box-shadow:var(--sombra-2)}
+.scrolly .passo .num-passo{font-weight:800;color:var(--laranja);font-size:.8rem;letter-spacing:1px}
+.scrolly .passo h4{color:var(--azul);margin:4px 0 6px}
+.scrolly .passo p{font-size:.92rem;color:var(--cinza)}
+.barra-mes{transition:fill var(--dur-2) var(--ease),opacity var(--dur-2) var(--ease)}
+
+/* ================= TRILHAS POR PERSONA ================= */
+.trilhas{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(290px,100%),1fr));gap:var(--s-4)}
+.trilha{background:#fff;border:1px solid var(--borda);border-radius:var(--r-2);padding:var(--s-4);
+  border-top:6px solid var(--govbr)}
+.trilha h3{color:var(--azul);font-size:1rem;margin-bottom:2px}
+.trilha .quem{font-size:.8rem;color:var(--rodape);margin-bottom:var(--s-3)}
+.trilha ol{padding-left:var(--s-5);font-size:.88rem;color:var(--cinza);display:grid;gap:6px}
+.trilha a{font-weight:600}
+
 /* ================= FOOTER ================= */
 footer.rodape{background:#fff;border-top:1px solid var(--borda);padding:var(--s-4) 0;margin-top:var(--s-6)}
 footer.rodape .linha{display:flex;align-items:center;gap:var(--s-5);flex-wrap:wrap}

@@ -1,6 +1,8 @@
 import './globals.css';
 import Link from 'next/link';
+import { Analytics } from '@vercel/analytics/react';
 import { TEMAS } from '../lib/dados';
+import VLibras from '../components/VLibras';
 
 export const metadata = {
   title: 'TED 77/2024 · Divulgação Científica — Transformação Digital do SUS',
@@ -18,7 +20,7 @@ export default function RootLayout({ children }) {
         />
       </head>
       <body>
-        <a className="skip" href="#conteudo">Ir para o conteúdo</a>
+        <a className="skip" href="#conteudo" accessKey="1">Ir para o conteúdo</a>
         <header className="topo">
           <span className="petal p1" aria-hidden="true" />
           <span className="petal p2" aria-hidden="true" />
@@ -31,11 +33,12 @@ export default function RootLayout({ children }) {
               <h1>Divulgação Científica · TED 77/2024</h1>
               <div className="sub">Transformação Digital do SUS · UFF · Ministério da Saúde</div>
             </div>
-            <nav className="principal" aria-label="Navegação principal">
+            <nav className="principal" aria-label="Navegação principal" accessKey="2">
               <Link href="/">Início</Link>
               <Link href="/#areas">Áreas</Link>
               <Link href="/#artigos">Artigos</Link>
               <Link href="/#conteudos">Tipos de conteúdo</Link>
+              <Link href="/buscar/" accessKey="3">🔍 Buscar</Link>
             </nav>
           </div>
         </header>
@@ -46,8 +49,10 @@ export default function RootLayout({ children }) {
             <div className="txt">
               Coleção de Divulgação Científica · TED nº 77/2024 — UFF · FEC · SEIDIGI/Ministério da Saúde
               <br />
-              Conteúdos sob licença CC-BY 4.0 · dados abertos no{' '}
-              <a href="https://github.com/RaulAraujoSilva/ted77-sih-rj-dados-abertos">GitHub</a>
+              Conteúdos sob licença CC-BY 4.0 ·{' '}
+              <Link href="/dados/">dados abertos</Link> ·{' '}
+              <Link href="/acessibilidade/">acessibilidade</Link> ·{' '}
+              <a href="/podcast.xml">feed do podcast</a>
             </div>
             <nav className="areas-chips" aria-label="Atalhos por área">
               {TEMAS.map((t) => (
@@ -56,6 +61,8 @@ export default function RootLayout({ children }) {
             </nav>
           </div>
         </footer>
+        <VLibras />
+        <Analytics />
       </body>
     </html>
   );

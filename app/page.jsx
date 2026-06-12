@@ -79,6 +79,38 @@ export default function Home() {
           </div>
         </div>
 
+        <h2 className="secao" id="comece"><span className="kicker">Comece por aqui</span>Trilhas por perfil</h2>
+        <p className="lead">Três jeitos de entrar no acervo, conforme o seu objetivo.</p>
+        <div className="trilhas">
+          <div className="trilha" style={{ borderTopColor: 'var(--azul)' }}>
+            <h3>🏛️ Para quem gere o SUS</h3>
+            <p className="quem">Secretarias, coordenações e fiscalização</p>
+            <ol>
+              <li>Leia o artigo <Link href="/artigos/ind-02/">em 5 perguntas</Link> (2 min)</li>
+              <li>Explore o <a href="https://raularaujosilva.github.io/ted77-sih-rj-dados-abertos/painel/">painel interativo</a> do seu município</li>
+              <li>Baixe o <Link href="/artigos/ind-02/">fichamento A3</Link> para a reunião de gestão</li>
+            </ol>
+          </div>
+          <div className="trilha" style={{ borderTopColor: 'var(--verde)' }}>
+            <h3>🩺 Para quem atua na ponta</h3>
+            <p className="quem">Profissionais de saúde e residentes</p>
+            <ol>
+              <li>Assista ao <Link href="/conteudos/videos/">vídeo de 3 minutos</Link></li>
+              <li>Estude com a <Link href="/conteudos/apostilas/">apostila didática</Link></li>
+              <li>Ganhe o selo no <Link href="/artigos/ind-02/#quiz">quiz de autoestudo</Link></li>
+            </ol>
+          </div>
+          <div className="trilha" style={{ borderTopColor: 'var(--roxo)' }}>
+            <h3>🔬 Para quem pesquisa e reusa</h3>
+            <p className="quem">Pesquisadores, jornalistas de dados e cidadãos</p>
+            <ol>
+              <li>Veja a <Link href="/artigos/ind-02/historia/">história visual dos dados</Link></li>
+              <li>Baixe as <Link href="/dados/">bases abertas</Link> (CSV + dicionário)</li>
+              <li>Cite com 1 clique (<Link href="/artigos/ind-02/">ABNT/BibTeX</Link>, CC-BY)</li>
+            </ol>
+          </div>
+        </div>
+
         <h2 className="secao" id="conteudos"><span className="kicker">Explorar por formato</span>Tipos de conteúdo</h2>
         <p className="lead">Todos os recursos de um mesmo formato, em um só lugar.</p>
         <div className="grid g4">

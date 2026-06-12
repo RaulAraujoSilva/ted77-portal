@@ -1,0 +1,139 @@
+{
+ "id": "IND-02",
+ "cinco_perguntas": [
+  {
+   "q": "O que o estudo propõe?",
+   "a": "Um caminho prático para integrar e visualizar os dados públicos do DATASUS em painéis de gestão interativos, usando engenharia de dados e ferramentas abertas."
+  },
+  {
+   "q": "Como?",
+   "a": "Pipeline em 4 etapas: extração programática (PySUS/FTP), limpeza e padronização (CID-10, duplicidades), vinculação probabilística de registros (Fellegi-Sunter) e organização analítica (OLAP) conectada a ferramentas de BI."
+  },
+  {
+   "q": "Sobre quais dados?",
+   "a": "Os sistemas nacionais do DATASUS — SIH, SIA, CNES, SIM, SINASC e SINAN — que cobrem um sistema de saúde que atende mais de 75% da população brasileira."
+  },
+  {
+   "q": "O que muda para o SUS?",
+   "a": "Gestores passam a detectar tendências — surtos, mudanças no uso de serviços — em minutos, e não em dias; o projeto demonstrou o caminho com as 926 mil internações do RJ em 2025, publicadas em base aberta com painel interativo."
+  },
+  {
+   "q": "Quais as limitações?",
+   "a": "Os sistemas não têm identificador único de paciente (a vinculação é probabilística, não exata) e os dados administrativos carregam regras de faturamento — a AIH aproxima, mas não é idêntica a 'uma internação'."
+  }
+ ],
+ "quiz": [
+  {
+   "p": "Uma secretaria quer saber quantos partos de residentes ocorreram no ano e em quais hospitais. Quais sistemas do DATASUS respondem melhor, respectivamente?",
+   "alts": [
+    "SIM e SINAN",
+    "SINASC e CNES",
+    "SIA e SIM",
+    "SINAN e e-SUS AB"
+   ],
+   "correta": 1,
+   "exp": "O SINASC registra os nascidos vivos (partos) e o CNES cadastra os estabelecimentos de saúde. O SIM trata de mortalidade; o SINAN, de doenças de notificação; o SIA, de atendimentos ambulatoriais."
+  },
+  {
+   "p": "Por que os dados do DATASUS são considerados 'fragmentados'?",
+   "alts": [
+    "Porque os arquivos são pagos",
+    "Porque os sistemas nasceram independentes, sem chaves comuns nem identificador único de paciente",
+    "Porque o TabNet integra tudo automaticamente",
+    "Porque os dados são amostrais"
+   ],
+   "correta": 1,
+   "exp": "Cada sistema (SIH, SIA, SIM...) foi criado para uma finalidade administrativa própria, com formatos e códigos diferentes — e não existe um ID único de paciente que os conecte."
+  },
+  {
+   "p": "Qual é o papel do PySUS no pipeline proposto?",
+   "alts": [
+    "Visualizar painéis",
+    "Vincular registros de pacientes",
+    "Extrair programaticamente os arquivos públicos do DATASUS",
+    "Corrigir códigos CID-10"
+   ],
+   "correta": 2,
+   "exp": "O PySUS é um pacote Python de código aberto que baixa os arquivos de disseminação direto dos servidores oficiais — a etapa de EXTRAÇÃO. Foi exatamente assim que a base aberta deste projeto reuniu as internações do RJ."
+  },
+  {
+   "p": "Sem identificador único de paciente, como ligar registros do SIH e do SIM da mesma pessoa?",
+   "alts": [
+    "É impossível",
+    "Comparação manual, registro por registro",
+    "Vinculação probabilística (ex.: Fellegi-Sunter) usando nome, nascimento e localização",
+    "Pelo número da AIH"
+   ],
+   "correta": 2,
+   "exp": "O record linkage probabilístico pondera concordâncias entre campos como nome, data de nascimento e local — técnica já aplicada a centenas de milhões de registros no Brasil."
+  },
+  {
+   "p": "No modelo dimensional (OLAP), o que guarda a TABELA FATO?",
+   "alts": [
+    "Os ângulos de análise (tempo, lugar)",
+    "Os eventos mensuráveis — cada internação, com valor e permanência",
+    "Os nomes dos municípios",
+    "As cores do painel"
+   ],
+   "correta": 1,
+   "exp": "A tabela fato guarda os eventos mensuráveis; as DIMENSÕES guardam os ângulos de análise (tempo, lugar, especialidade, diagnóstico). É o 'cubo' pronto para fatiar e cruzar."
+  },
+  {
+   "p": "Qual a principal limitação do TabNet apontada pela publicação?",
+   "alts": [
+    "É pago",
+    "Entrega apenas tabelas estáticas, sem integração de fontes nem interatividade",
+    "Não cobre o SIH",
+    "Exige cadastro com CPF"
+   ],
+   "correta": 1,
+   "exp": "O TabNet teve papel histórico na democratização do acesso, mas se limita a tabelas-resumo estáticas — sem filtros dinâmicos, drill-down nem cruzamento de múltiplas fontes."
+  },
+  {
+   "p": "Segundo a publicação, o ganho central dos painéis integrados para o gestor é:",
+   "alts": [
+    "Eliminar a limpeza de dados",
+    "Substituir os sistemas de origem",
+    "Detectar tendências em minutos, e não em dias",
+    "Dispensar a vinculação de registros"
+   ],
+   "correta": 2,
+   "exp": "É a síntese do impacto: com dados integrados e visualização interativa, surtos e mudanças no uso dos serviços aparecem em minutos — tempo de agir."
+  },
+  {
+   "p": "A base aberta do projeto (SIH-RJ 2025) usa a AIH como unidade. O que isso significa na interpretação?",
+   "alts": [
+    "Cada AIH é exatamente um paciente",
+    "A AIH aproxima 'uma internação', mas segue regras de faturamento do SIH",
+    "AIHs não servem para análise",
+    "A AIH registra só óbitos"
+   ],
+   "correta": 1,
+   "exp": "Dados administrativos carregam as regras da sua origem: a AIH (Autorização de Internação Hospitalar) é a aproximação usual de internação, com ressalvas como reapresentações e longa permanência — por isso o painel documenta fonte e competência."
+  }
+ ],
+ "mindmap": "# O tesouro de dados do SUS\n## 1 · O tesouro (DATASUS)\n### SUS atende +75% da população\n### Sistemas nacionais\n#### SIH — internações\n#### SIA — ambulatório\n#### CNES — estabelecimentos\n#### SIM — mortalidade\n#### SINASC — nascidos vivos\n#### SINAN — notificações\n## 2 · O problema\n### Silos: formatos e códigos próprios\n### Sem ID único de paciente\n### Trajetória do cuidado se perde\n### TabNet = tabelas estáticas\n## 3 · O caminho (pipeline)\n### Extração — PySUS / FTP oficial\n### Limpeza — CID-10, duplicidades\n### Vinculação probabilística — Fellegi-Sunter\n### OLAP — fatos e dimensões\n## 4 · O resultado\n### Painéis interativos (BI)\n### Tendências em minutos, não dias\n### Caso real: 926 mil internações RJ-2025\n### Base aberta + painel públicos\n## Futuro\n### Nuvem e tempo quase real\n### OMOP · HL7 FHIR\n### IA preditiva explicável",
+ "referencias": [
+  "ALVES, L. F.; SILVA, R. A.; OLIVEIRA, D. Z. W.; RODRIGUES, L. E. M.; SEIXAS, F. L.; SANTOS, A. B. Building Health Management Dashboards with DATASUS Public Data. IEEE INDUSCON. Universidade Federal Fluminense. Pesquisa apoiada pelo TED nº 77/2024 (SEIDIGI/Ministério da Saúde).",
+  "ALI, M. S. et al. Administrative data linkage in Brazil: potentials for health technology assessment. Frontiers in Pharmacology, v. 10, p. 984, 2019.",
+  "ICHIHARA, M. Y.; ALMEIDA, B.; BARRETO, M. L. CIDACS: Brazil's Center for Data and Knowledge Integration for Health. International Journal of Population Data Science, v. 6, n. 1, 2021.",
+  "JUNIOR, E. P. P. et al. Integrating real-world data from Brazil and Pakistan into the OMOP common data model... JAMIA, v. 30, n. 4, p. 643-655, 2023.",
+  "GAZZARATA, R. et al. HL7 FHIR in digital healthcare ecosystems for chronic disease management: scoping review. International Journal of Medical Informatics, 2024.",
+  "FREIRE, S. M.; SOUZA, R. C.; ALMEIDA, R. T. Integrating Brazilian health information systems in order to support the building of data warehouses. Research on Biomedical Engineering, v. 31, p. 196-207, 2015.",
+  "TED 77/2024 — Transformação Digital do SUS (UFF/FEC/SEIDIGI-MS). Internações hospitalares do SUS no Rio de Janeiro — 2025 (SIH/SUS), base de dados aberta, v1.0.0, 2026. Disponível em: github.com/RaulAraujoSilva/ted77-sih-rj-dados-abertos."
+ ],
+ "citacao": {
+  "abnt": "TED 77/2024 — TRANSFORMAÇÃO DIGITAL DO SUS (UFF/FEC/SEIDIGI-MS). O tesouro de dados do SUS: como transformar o DATASUS em painéis de gestão (versão de divulgação científica de ALVES et al., Building Health Management Dashboards with DATASUS Public Data, IEEE INDUSCON). Portal de Divulgação Científica do TED 77/2024, 2026. Disponível em: https://ted77-portal.vercel.app/artigos/ind-02/.",
+  "bibtex": "@misc{ted77_ind02_2026,\n  title    = {O tesouro de dados do SUS: como transformar o DATASUS em pain\\'eis de gest\\~ao},\n  author   = {{TED 77/2024 — Transforma\\c{c}\\~ao Digital do SUS (UFF/FEC/SEIDIGI-MS)}},\n  year     = {2026},\n  howpublished = {Portal de Divulga\\c{c}\\~ao Cient\\'ifica do TED 77/2024},\n  url      = {https://ted77-portal.vercel.app/artigos/ind-02/},\n  note     = {Vers\\~ao de divulga\\c{c}\\~ao de Alves et al., Building Health Management Dashboards with DATASUS Public Data, IEEE INDUSCON. Licen\\c{c}a CC-BY 4.0}\n}"
+ },
+ "glossario": {
+  "DATASUS": "Departamento de informática do SUS; mantém e dissemina os sistemas nacionais de informação em saúde.",
+  "AIH": "Autorização de Internação Hospitalar — unidade de registro do SIH e aproximação usual de 'uma internação'.",
+  "OLAP": "Processamento analítico on-line: dados organizados em fatos e dimensões para consultas multidimensionais rápidas.",
+  "vinculação probabilística": "Técnicas estatísticas (ex.: Fellegi-Sunter) que decidem se registros de bases diferentes pertencem à mesma pessoa.",
+  "CID-10": "Classificação Internacional de Doenças (10ª revisão), usada para codificar diagnósticos em 22 capítulos.",
+  "TabNet": "Tabulador web do DATASUS para consultas com tabelas-resumo estáticas.",
+  "PySUS": "Pacote Python de código aberto para acesso programático aos arquivos do DATASUS.",
+  "BI": "Business Intelligence — ferramentas que transformam dados em painéis e análises de apoio à decisão."
+ }
+}

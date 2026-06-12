@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd" xmlns:atom="http://www.w3.org/2005/Atom">
+ <channel>
+  <title>Ciência do SUS em Conversa — TED 77/2024</title>
+  <link>https://ted77-portal.vercel.app/</link>
+  <atom:link href="https://ted77-portal.vercel.app/podcast.xml" rel="self" type="application/rss+xml"/>
+  <language>pt-BR</language>
+  <description>Áudio-resumos da produção científica do TED 77/2024 (Transformação Digital do SUS — UFF e Ministério da Saúde), em formato de conversa acessível. Um episódio por artigo do acervo.</description>
+  <itunes:author>TED 77/2024 — UFF · Ministério da Saúde</itunes:author>
+  <itunes:image href="https://ted77-portal.vercel.app/podcast-capa.png"/>
+  <itunes:category text="Science"/>
+  <itunes:category text="Government"/>
+  <itunes:explicit>false</itunes:explicit>
+  <itunes:owner><itunes:name>Projeto TED 77/2024</itunes:name></itunes:owner>
+  <lastBuildDate>Fri, 12 Jun 2026 14:27:58 -0300</lastBuildDate>
+  <item>
+   <title>EP 01 · O tesouro de dados do SUS</title>
+   <description>Arthur e Carla destrincham como transformar os dados públicos do DATASUS em painéis de gestão — do problema da fragmentação ao pipeline aberto que organizou 926 mil internações do RJ. Baseado em artigo científico do TED 77/2024 (UFF · Ministério da Saúde). Conteúdos em ted77-portal.vercel.app/artigos/ind-02/</description>
+   <enclosure url="https://ted77-portal.vercel.app/assets/IND-02/podcast.mp3" length="5813020" type="audio/mpeg"/>
+   <guid isPermaLink="false">ted77-ep-01</guid>
+   <pubDate>Sat, 13 Jun 2026 12:00:00 -0300</pubDate>
+   <itunes:duration>00:06:05</itunes:duration>
+   <itunes:explicit>false</itunes:explicit>
+  </item>
+ </channel>
+</rss>
