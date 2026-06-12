@@ -1,0 +1,442 @@
+{
+ "taxonomia": {
+  "T1": "Maturidade e estratégia de saúde digital",
+  "T2": "Governança, cultura e sustentabilidade",
+  "T3": "Interoperabilidade e dados em saúde",
+  "T4": "Lean Healthcare e gestão de operações",
+  "T5": "IA e sistemas aplicados ao cuidado",
+  "T6": "Capacitação e educação digital"
+ },
+ "publicacoes": [
+  {
+   "id": "CAP-01",
+   "fonte": "Capítulo de livro",
+   "idioma": "en",
+   "tema": "T5",
+   "tema_nome": "IA e sistemas aplicados ao cuidado",
+   "titulo_pt": "Telemedicina e sustentabilidade sistêmica",
+   "titulo_original": "Telemedicine and Systemic Sustainability: From Facing Covid-19 to Consolidating Lean and Resilient Care Models",
+   "tipo_estudo": "capítulo conceitual"
+  },
+  {
+   "id": "CAP-02",
+   "fonte": "Capítulo de livro",
+   "idioma": "en",
+   "tema": "T1",
+   "tema_nome": "Maturidade e estratégia de saúde digital",
+   "titulo_pt": "Modelos de avaliação de maturidade digital: framework conceitual",
+   "titulo_original": "Digital Maturity Assessment Models: Conceptual Framework and Applications in the Context of Sustainable Management in Healthcare Services",
+   "tipo_estudo": "capítulo conceitual"
+  },
+  {
+   "id": "CAP-03",
+   "fonte": "Capítulo de livro",
+   "idioma": "en",
+   "tema": "T2",
+   "tema_nome": "Governança, cultura e sustentabilidade",
+   "titulo_pt": "Impactos da transformação digital na governança do SUS",
+   "titulo_original": "IMPACTS OF DIGITAL TRANSFORMATION ON THE GOVERNANCE OF THE UNIFIED HEALTH SYSTEM (SUS)",
+   "tipo_estudo": "capítulo analítico"
+  },
+  {
+   "id": "CAP-04",
+   "fonte": "Capítulo de livro",
+   "idioma": "en",
+   "tema": "T2",
+   "tema_nome": "Governança, cultura e sustentabilidade",
+   "titulo_pt": "Transformação digital no SUS: sustentabilidade e logística verde",
+   "titulo_original": "DIGITAL TRANSFORMATION IN THE SUS: SUSTAINABILITY STRATEGY AND GREEN LOGISTICS IN HEALTHCARE SERVICES",
+   "tipo_estudo": "capítulo conceitual"
+  },
+  {
+   "id": "CAP-05",
+   "fonte": "Capítulo de livro",
+   "idioma": "en",
+   "tema": "T5",
+   "tema_nome": "IA e sistemas aplicados ao cuidado",
+   "titulo_pt": "Comunicação ativa da UBS com a população via WhatsApp",
+   "titulo_original": "ACTIVE COMMUNICATION SYSTEM OF THE BASIC HEALTH UNIT WITH THE POPULATION VIA WHATSAPP",
+   "tipo_estudo": "desenvolvimento de sistema"
+  },
+  {
+   "id": "CAP-06",
+   "fonte": "Capítulo de livro",
+   "idioma": "en",
+   "tema": "T5",
+   "tema_nome": "IA e sistemas aplicados ao cuidado",
+   "titulo_pt": "Agendamento inteligente via WhatsApp para UBS",
+   "titulo_original": "INTELLIGENT APPOINTMENT SCHEDULING SYSTEM VIA WHATSAPP FOR BASIC HEALTH UNITS",
+   "tipo_estudo": "desenvolvimento de sistema"
+  },
+  {
+   "id": "CAP-07",
+   "fonte": "Capítulo de livro",
+   "idioma": "en",
+   "tema": "T2",
+   "tema_nome": "Governança, cultura e sustentabilidade",
+   "titulo_pt": "Transformação digital sustentável: IA, dados e inovação responsável",
+   "titulo_original": "SUSTAINABLE DIGITAL TRANSFORMATION IN THE BRAZILIAN PUBLIC HEALTH SYSTEM (SUS): ARTIFICIAL INTELLIGENCE, HEALTH DATA, AND RESPONSIBLE INNOVATION",
+   "tipo_estudo": "capítulo conceitual"
+  },
+  {
+   "id": "CAP-08",
+   "fonte": "Capítulo de livro",
+   "idioma": "en",
+   "tema": "T5",
+   "tema_nome": "IA e sistemas aplicados ao cuidado",
+   "titulo_pt": "Tecnologia digital na comunicação entre enfermagem e pacientes",
+   "titulo_original": "Digital Technology for Communication Between Nursing Professionals and Patients in the Brazilian Public Health System (SUS)",
+   "tipo_estudo": "proposta de tecnologia"
+  },
+  {
+   "id": "CAP-09",
+   "fonte": "Capítulo de livro",
+   "idioma": "en",
+   "tema": "T4",
+   "tema_nome": "Lean Healthcare e gestão de operações",
+   "titulo_pt": "Gestão da superlotação em estabelecimentos de saúde",
+   "titulo_original": "Overcrowding Management in Healthcare Facilities: An Analysis of Actions for Performance Improvement",
+   "tipo_estudo": "análise aplicada"
+  },
+  {
+   "id": "CAP-10",
+   "fonte": "Capítulo de livro",
+   "idioma": "en",
+   "tema": "T4",
+   "tema_nome": "Lean Healthcare e gestão de operações",
+   "titulo_pt": "Mapeamento de fluxo de valor em BPMN para otimizar TEDs",
+   "titulo_original": "BPMN-BASED VALUE STREAM MAPPING FOR OPTIMIZING DECENTRALIZED EXECUTION AGREEMENTS (TED) IN LEAN AND SUSTAINABLE PUBLIC HEALTH SERVICES",
+   "tipo_estudo": "estudo aplicado"
+  },
+  {
+   "id": "CAP-11",
+   "fonte": "Capítulo de livro",
+   "idioma": "en",
+   "tema": "T4",
+   "tema_nome": "Lean Healthcare e gestão de operações",
+   "titulo_pt": "Mapeamento do fluxo do processo administrativo de TED",
+   "titulo_original": "MAPPING THE FLOW IN THE DECENTRALIZED EXECUTION TERM (TED) ADMINISTRATIVE PROCESS IN PUBLIC ADMINISTRATION - A STRATEGIC APPROACH TO SUSTAINABILITY IN HEALTH SERVICES",
+   "tipo_estudo": "estudo aplicado"
+  },
+  {
+   "id": "IJC-01",
+   "fonte": "IJCIEOM",
+   "idioma": "en",
+   "tema": "T4",
+   "tema_nome": "Lean Healthcare e gestão de operações",
+   "titulo_pt": "Lean e digital na licitação hospitalar: avaliação técnica acelerada",
+   "titulo_original": "Digital Transformation and Lean in Hospital Public Procurement: Accelerating Technical Sample Evaluation",
+   "tipo_estudo": "estudo de caso misto"
+  },
+  {
+   "id": "IJC-02",
+   "fonte": "IJCIEOM",
+   "idioma": "en",
+   "tema": "T4",
+   "tema_nome": "Lean Healthcare e gestão de operações",
+   "titulo_pt": "Framework por fases: Lean Six Sigma, governança e gestão de projetos",
+   "titulo_original": "A Phased Framework Integrating Lean Six Sigma, Governance, and Project Management for Implementation in Healthcare Units",
+   "tipo_estudo": "framework conceitual"
+  },
+  {
+   "id": "IJC-03",
+   "fonte": "IJCIEOM",
+   "idioma": "en",
+   "tema": "T6",
+   "tema_nome": "Capacitação e educação digital",
+   "titulo_pt": "Lean e Design Thinking para capacitação em saúde digital",
+   "titulo_original": "Integrating Lean and Design Thinking for Digital Health Capacity Building: A Scalable Framework for Public",
+   "tipo_estudo": "design science research"
+  },
+  {
+   "id": "IJC-04",
+   "fonte": "IJCIEOM",
+   "idioma": "en",
+   "tema": "T3",
+   "tema_nome": "Interoperabilidade e dados em saúde",
+   "titulo_pt": "Design Thinking para interoperabilidade SER/SISREG na cardiologia",
+   "titulo_original": "Application of Design Thinking for the Development of Interoperability Models between SER/SISREG in Specialized Cardiology Services within the Brazilian",
+   "tipo_estudo": "pesquisa aplicada"
+  },
+  {
+   "id": "IJC-05",
+   "fonte": "IJCIEOM",
+   "idioma": "en",
+   "tema": "T1",
+   "tema_nome": "Maturidade e estratégia de saúde digital",
+   "titulo_pt": "Índice Nacional de Maturidade em Saúde Digital: fundamentos e aplicação",
+   "titulo_original": "NATIONAL DIGITAL HEALTH MATURITY INDEX: ESTABLISHING THE THEORETICAL",
+   "tipo_estudo": "RSL + estudos de caso"
+  },
+  {
+   "id": "IJC-06",
+   "fonte": "IJCIEOM",
+   "idioma": "en",
+   "tema": "T5",
+   "tema_nome": "IA e sistemas aplicados ao cuidado",
+   "titulo_pt": "Indústria 5.0 na saúde: sistema de apoio ao cuidado da fibromialgia",
+   "titulo_original": "Digital Transformation and Industry 5.0 in Healthcare: A Care Management Support System for Fibromyalgia",
+   "tipo_estudo": "desenvolvimento de sistema"
+  },
+  {
+   "id": "IJC-07",
+   "fonte": "IJCIEOM",
+   "idioma": "en",
+   "tema": "T4",
+   "tema_nome": "Lean Healthcare e gestão de operações",
+   "titulo_pt": "Lean Healthcare como catalisador da transformação digital",
+   "titulo_original": "Lean Healthcare as a Catalyst for Digital Transformation in Healthcare in Brazil: A Convergence Framework",
+   "tipo_estudo": "framework conceitual"
+  },
+  {
+   "id": "IJC-08",
+   "fonte": "IJCIEOM",
+   "idioma": "en",
+   "tema": "T2",
+   "tema_nome": "Governança, cultura e sustentabilidade",
+   "titulo_pt": "Cultura organizacional como motor da transformação digital",
+   "titulo_original": "Organizational Culture as a Critical Driver for Digital Transformation in Public Health Systems: A Literature",
+   "tipo_estudo": "revisão integrativa"
+  },
+  {
+   "id": "IJC-09",
+   "fonte": "IJCIEOM",
+   "idioma": "en",
+   "tema": "T5",
+   "tema_nome": "IA e sistemas aplicados ao cuidado",
+   "titulo_pt": "ClinKey: gestão automatizada de chaves com IoT para Lean Healthcare",
+   "titulo_original": "ClinKey System: An IoT-Enabled Automated Key Management Solution for Lean Healthcare, Patient",
+   "tipo_estudo": "desenvolvimento de sistema"
+  },
+  {
+   "id": "IJC-10",
+   "fonte": "IJCIEOM",
+   "idioma": "en",
+   "tema": "T1",
+   "tema_nome": "Maturidade e estratégia de saúde digital",
+   "titulo_pt": "Desafios e avanços da saúde digital na América Latina",
+   "titulo_original": "Challenges and Advances in Digital Health in Latin America: A State-of-the-Art Integrative Review Aligned",
+   "tipo_estudo": "revisão integrativa"
+  },
+  {
+   "id": "IJC-11",
+   "fonte": "IJCIEOM",
+   "idioma": "en",
+   "tema": "T4",
+   "tema_nome": "Lean Healthcare e gestão de operações",
+   "titulo_pt": "Água como estratégia de segurança em hospital privado brasileiro",
+   "titulo_original": "Water as a safety strategy in a Brazilian private hospital: structuring the management plan in light of WHO",
+   "tipo_estudo": "estudo de caso"
+  },
+  {
+   "id": "IJC-12",
+   "fonte": "IJCIEOM",
+   "idioma": "en",
+   "tema": "T5",
+   "tema_nome": "IA e sistemas aplicados ao cuidado",
+   "titulo_pt": "De 400 horas para 20: valoração de ativos regulatórios com IA e Lean",
+   "titulo_original": "From 400 Hours to 20: Revolutionizing Regulatory Asset Valuation with AI and Lean Methodologies.",
+   "tipo_estudo": "estudo de caso longitudinal"
+  },
+  {
+   "id": "IND-01",
+   "fonte": "INDUSCON",
+   "idioma": "pt",
+   "tema": "T1",
+   "tema_nome": "Maturidade e estratégia de saúde digital",
+   "titulo_pt": "Maturidade digital na saúde: revisão dos modelos de avaliação",
+   "titulo_original": "Maturidade digital na saúde: Uma Revisão Narrativa da Literatura dos Modelos de Avaliação",
+   "tipo_estudo": "revisão narrativa"
+  },
+  {
+   "id": "IND-02",
+   "fonte": "INDUSCON",
+   "idioma": "en",
+   "tema": "T3",
+   "tema_nome": "Interoperabilidade e dados em saúde",
+   "titulo_pt": "Painéis de gestão em saúde com dados públicos do DATASUS",
+   "titulo_original": "Building Health Management Dashboards with DATASUS Public Data",
+   "tipo_estudo": "estudo aplicado"
+  },
+  {
+   "id": "IND-03",
+   "fonte": "INDUSCON",
+   "idioma": "en",
+   "tema": "T6",
+   "tema_nome": "Capacitação e educação digital",
+   "titulo_pt": "Microcredenciais e AVA na transformação digital da saúde",
+   "titulo_original": "Microcredentials and LMS in Health Sector Digital Transformation: Experiences from a Brazilian",
+   "tipo_estudo": "relato de experiência"
+  },
+  {
+   "id": "IND-04",
+   "fonte": "INDUSCON",
+   "idioma": "en",
+   "tema": "T3",
+   "tema_nome": "Interoperabilidade e dados em saúde",
+   "titulo_pt": "Interoperabilidade como base de políticas de saúde sustentáveis",
+   "titulo_original": "Challenges and Strategies for Interoperability as a Basis for Sustainable Health Policies: A Systematic",
+   "tipo_estudo": "revisão sistemática"
+  },
+  {
+   "id": "IND-05",
+   "fonte": "INDUSCON",
+   "idioma": "en",
+   "tema": "T5",
+   "tema_nome": "IA e sistemas aplicados ao cuidado",
+   "titulo_pt": "Avaliação empírica do ecossistema de urgência com apoio de IA",
+   "titulo_original": "Empirical Evaluation of the Emergency Care Ecosystem Using Artificial Intelligence for Decision-makers' Support",
+   "tipo_estudo": "estudo empírico"
+  },
+  {
+   "id": "IND-06",
+   "fonte": "INDUSCON",
+   "idioma": "en",
+   "tema": "T1",
+   "tema_nome": "Maturidade e estratégia de saúde digital",
+   "titulo_pt": "Uma década de transformação digital no SUS",
+   "titulo_original": "Digital Transformation in the Brazilian Unified Health System (SUS) Over the Past Decade",
+   "tipo_estudo": "revisão integrativa"
+  },
+  {
+   "id": "IND-07",
+   "fonte": "INDUSCON",
+   "idioma": "en",
+   "tema": "T3",
+   "tema_nome": "Interoperabilidade e dados em saúde",
+   "titulo_pt": "Integração de dados na regulação do acesso especializado",
+   "titulo_original": "Integrating Data into Referral Management Systems: A Global Review and Proposal for Enhanced Specialized Care Regulation",
+   "tipo_estudo": "revisão integrativa"
+  },
+  {
+   "id": "IND-08",
+   "fonte": "INDUSCON",
+   "idioma": "en",
+   "tema": "T4",
+   "tema_nome": "Lean Healthcare e gestão de operações",
+   "titulo_pt": "Teoria das Restrições para otimizar processos do SUS",
+   "titulo_original": "Applying the Theory of Constraints to Optimize Processes in the Brazilian Public Health System",
+   "tipo_estudo": "estudo aplicado"
+  },
+  {
+   "id": "IND-09",
+   "fonte": "INDUSCON",
+   "idioma": "en",
+   "tema": "T4",
+   "tema_nome": "Lean Healthcare e gestão de operações",
+   "titulo_pt": "Segurança do paciente e Lean Healthcare",
+   "titulo_original": "Patient safety and the lean healthcare methodology: an integrative review",
+   "tipo_estudo": "revisão integrativa"
+  },
+  {
+   "id": "IND-10",
+   "fonte": "INDUSCON",
+   "idioma": "pt",
+   "tema": "T2",
+   "tema_nome": "Governança, cultura e sustentabilidade",
+   "titulo_pt": "Impacto da transformação digital na governança do SUS",
+   "titulo_original": "Análise do impacto da transformação digital na Governança do SUS",
+   "tipo_estudo": "estudo qualitativo"
+  },
+  {
+   "id": "IND-11",
+   "fonte": "INDUSCON",
+   "idioma": "pt",
+   "tema": "T2",
+   "tema_nome": "Governança, cultura e sustentabilidade",
+   "titulo_pt": "Avaliação do impacto das ações do Programa SUS Digital",
+   "titulo_original": "Transformação Digital no SUS: Uma Avaliação do Impacto das Ações do Programa SUS Digital",
+   "tipo_estudo": "estudo híbrido"
+  },
+  {
+   "id": "IND-12",
+   "fonte": "INDUSCON",
+   "idioma": "pt",
+   "tema": "T5",
+   "tema_nome": "IA e sistemas aplicados ao cuidado",
+   "titulo_pt": "Tecnologias digitais nas práticas clínicas no Brasil",
+   "titulo_original": "Técnologias Digitais em Práticas Clínicas no Brasil: Uma Revisão Sistemática de Seu Uso e Impacto",
+   "tipo_estudo": "revisão sistemática"
+  },
+  {
+   "id": "IND-13",
+   "fonte": "INDUSCON",
+   "idioma": "en",
+   "tema": "T4",
+   "tema_nome": "Lean Healthcare e gestão de operações",
+   "titulo_pt": "Gestão de processos em saúde: estudo bibliométrico",
+   "titulo_original": "Process Management in Healthcare: bibliometric study Zeferino, Ana Carolina Sanches",
+   "tipo_estudo": "estudo bibliométrico"
+  },
+  {
+   "id": "IND-14",
+   "fonte": "INDUSCON",
+   "idioma": "en",
+   "tema": "T1",
+   "tema_nome": "Maturidade e estratégia de saúde digital",
+   "titulo_pt": "Saúde digital no Brasil: contexto e desafios",
+   "titulo_original": "Digital Health: context and challenges in Brazil with focus on public health",
+   "tipo_estudo": "revisão"
+  },
+  {
+   "id": "IND-15",
+   "fonte": "INDUSCON",
+   "idioma": "en",
+   "tema": "T1",
+   "tema_nome": "Maturidade e estratégia de saúde digital",
+   "titulo_pt": "Proposta de avaliação da Estratégia de Saúde Digital 2020-2028",
+   "titulo_original": "Proposal for Evaluation of the Digital Health Strategy for Brazil, 2020-2028",
+   "tipo_estudo": "proposta de modelo"
+  },
+  {
+   "id": "IND-16",
+   "fonte": "INDUSCON",
+   "idioma": "en",
+   "tema": "T1",
+   "tema_nome": "Maturidade e estratégia de saúde digital",
+   "titulo_pt": "Maturidade digital dos hospitais públicos brasileiros",
+   "titulo_original": "Digital Maturity Of Brazilian Public Hospitals: Challenges and opportunities for digital",
+   "tipo_estudo": "survey"
+  },
+  {
+   "id": "IND-17",
+   "fonte": "INDUSCON",
+   "idioma": "en",
+   "tema": "T5",
+   "tema_nome": "IA e sistemas aplicados ao cuidado",
+   "titulo_pt": "O papel da IA no diagnóstico, monitoramento e tratamento personalizado",
+   "titulo_original": "The Role of Artificial Intelligence in Diagnosis, Monitoring, and Personalized Treatment in the Digital Health Era",
+   "tipo_estudo": "revisão"
+  },
+  {
+   "id": "IND-18",
+   "fonte": "INDUSCON",
+   "idioma": "en",
+   "tema": "T6",
+   "tema_nome": "Capacitação e educação digital",
+   "titulo_pt": "Braço do Saber: pensamento computacional para educadores indígenas",
+   "titulo_original": "Integration of Computational Thinking and Ethnoinformatics: The Development of Braço do",
+   "tipo_estudo": "desenvolvimento de artefato"
+  },
+  {
+   "id": "IND-19",
+   "fonte": "INDUSCON",
+   "idioma": "pt",
+   "tema": "T1",
+   "tema_nome": "Maturidade e estratégia de saúde digital",
+   "titulo_pt": "Instrumentos para avaliar a maturidade digital em saúde",
+   "titulo_original": "Transformação Digital em Saúde: Uma Revisão dos Instrumentos para Avaliar a Maturidade Digital",
+   "tipo_estudo": "revisão sistemática"
+  },
+  {
+   "id": "IND-20",
+   "fonte": "INDUSCON",
+   "idioma": "pt",
+   "tema": "T6",
+   "tema_nome": "Capacitação e educação digital",
+   "titulo_pt": "Capacitação digital no SUS com Lean Thinking e Design Thinking",
+   "titulo_original": "Capacitação Digital no SUS: Um Framework Estruturado Integrando Lean Thinking e Design",
+   "tipo_estudo": "design science research"
+  }
+ ]
+}

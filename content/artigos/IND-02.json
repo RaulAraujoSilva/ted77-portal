@@ -1,0 +1,18 @@
+{
+ "id": "IND-02",
+ "assets": {
+  "apostila": "/assets/IND-02/apostila.pdf",
+  "fichamento_pptx": "/assets/IND-02/fichamento-dmaic.pptx",
+  "fichamento_a3": "/assets/IND-02/fichamento-a3.pdf",
+  "resumo": "/assets/IND-02/resumo.pdf",
+  "video": "/assets/IND-02/video.mp4",
+  "legendas": "/assets/IND-02/legendas.vtt",
+  "podcast": "/assets/IND-02/podcast.mp3",
+  "infografico": "/assets/IND-02/infografico.png",
+  "capa": "/assets/IND-02/capa.png"
+ },
+ "links": {
+  "painel": "https://raularaujosilva.github.io/ted77-sih-rj-dados-abertos/painel/",
+  "base": "https://github.com/RaulAraujoSilva/ted77-sih-rj-dados-abertos"
+ }
+}
