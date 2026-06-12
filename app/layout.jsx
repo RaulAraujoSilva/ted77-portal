@@ -1,5 +1,6 @@
 import './globals.css';
 import Link from 'next/link';
+import { TEMAS } from '../lib/dados';
 
 export const metadata = {
   title: 'TED 77/2024 · Divulgação Científica — Transformação Digital do SUS',
@@ -48,6 +49,11 @@ export default function RootLayout({ children }) {
               Conteúdos sob licença CC-BY 4.0 · dados abertos no{' '}
               <a href="https://github.com/RaulAraujoSilva/ted77-sih-rj-dados-abertos">GitHub</a>
             </div>
+            <nav className="areas-chips" aria-label="Atalhos por área">
+              {TEMAS.map((t) => (
+                <a key={t.id} href={`/areas/${t.id}/`} data-tema={t.sigla}>{t.sigla} · {t.nome.split(' ')[0]}</a>
+              ))}
+            </nav>
           </div>
         </footer>
       </body>

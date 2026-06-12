@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import { PUBLICACOES } from '../../../lib/dados';
+import { TipoIcone } from '../../../components/Icones';
 
 export function generateStaticParams() {
   return PUBLICACOES.filter((p) => p.manifest).map((p) => ({ id: p.slug }));
@@ -10,28 +11,35 @@ export function generateMetadata({ params }) {
   return { title: `${p.titulo_pt} — TED 77/2024` };
 }
 
+function Cab({ icone, titulo }) {
+  return (
+    <div className="cab">
+      <TipoIcone nome={icone} />
+      <h3>{titulo}</h3>
+    </div>
+  );
+}
+
 export default function Artigo({ params }) {
   const p = PUBLICACOES.find((x) => x.slug === params.id);
   const a = p.manifest.assets;
   const l = p.manifest.links;
   return (
-    <main id="conteudo" className="container">
-      <p className="crumb">
-        <Link href="/">Início</Link> › <Link href={`/areas/${p.tema.toLowerCase()}/`}>{p.tema_nome}</Link> › {p.id}
-      </p>
+    <main id="conteudo" className="container" data-tema={p.tema}>
+      <nav className="crumb" aria-label="Trilha de navegação">
+        <Link href="/">Início</Link> › <Link href={`/areas/${p.tema.toLowerCase()}/`}>{p.tema_nome}</Link> › <b>{p.id}</b>
+      </nav>
 
-      <section className="hot-hero">
-        <span className="badge">{p.tema} · {p.tema_nome}</span>
+      <section className="hot-hero" data-tema={p.tema}>
+        <span className="badge claro">{p.tema} · {p.tema_nome}</span>
         <h2>{p.titulo_pt}</h2>
         <p className="orig">{p.titulo_original}</p>
-        <p className="autores">
-          {p.fonte} · {p.tipo_estudo} · acervo TED 77/2024 ({p.id})
-        </p>
+        <p className="autores">{p.fonte} · {p.tipo_estudo} · acervo TED 77/2024 ({p.id})</p>
       </section>
 
       {a.video && (
-        <div className="bloco">
-          <h3>🎬 Vídeo (3 min)</h3>
+        <div className="bloco" data-tipo="videos">
+          <Cab icone="video" titulo="Vídeo (3 min)" />
           <p className="desc">A história do artigo em vídeo, com narração e legendas.</p>
           <video controls preload="metadata" crossOrigin="anonymous">
             <source src={a.video} type="video/mp4" />
@@ -45,8 +53,8 @@ export default function Artigo({ params }) {
 
       <div className="empilha2">
         {a.apostila && (
-          <div className="bloco">
-            <h3>📘 Apostila didática</h3>
+          <div className="bloco" data-tipo="apostilas">
+            <Cab icone="apostila" titulo="Apostila didática" />
             <p className="desc">Versão completa para estudo: módulos, boxes, questões com gabarito e glossário (PDF, ~20 págs).</p>
             <div className="botoes">
               <a className="btn" href={a.apostila}>Abrir apostila (PDF)</a>
@@ -55,8 +63,8 @@ export default function Artigo({ params }) {
           </div>
         )}
         {(a.fichamento_a3 || a.fichamento_pptx) && (
-          <div className="bloco">
-            <h3>📋 Fichamento DMAIC</h3>
+          <div className="bloco" data-tipo="fichamentos">
+            <Cab icone="fichamento" titulo="Fichamento DMAIC" />
             <p className="desc">O artigo em uma página (Relatório A3) e em apresentação, no ciclo Definir-Medir-Analisar-Implementar-Controlar.</p>
             <div className="botoes">
               {a.fichamento_a3 && <a className="btn" href={a.fichamento_a3}>Relatório A3 (PDF)</a>}
@@ -67,16 +75,16 @@ export default function Artigo({ params }) {
       </div>
 
       {a.podcast && (
-        <div className="bloco">
-          <h3>🎧 Podcast</h3>
-          <p className="desc">Áudio-resumo em formato de conversa (Carlos e Carla, ~6 min).</p>
+        <div className="bloco" data-tipo="podcasts">
+          <Cab icone="podcast" titulo="Podcast" />
+          <p className="desc">Áudio-resumo em formato de conversa (Arthur e Carla, ~6 min).</p>
           <audio controls preload="metadata" src={a.podcast} />
         </div>
       )}
 
       {l.painel && (
-        <div className="bloco">
-          <h3>📊 Painel interativo</h3>
+        <div className="bloco" data-tipo="paineis">
+          <Cab icone="painel" titulo="Painel interativo" />
           <p className="desc">
             Os dados do artigo, navegáveis: filtros por município e período, mapa do estado e morbidade
             por capítulo CID-10. <a href={l.painel}>Abrir em tela cheia ↗</a>
@@ -92,8 +100,8 @@ export default function Artigo({ params }) {
 
       <div className="empilha2">
         {l.base && (
-          <div className="bloco">
-            <h3>🗃️ Base de dados aberta</h3>
+          <div className="bloco" data-tipo="bases">
+            <Cab icone="base" titulo="Base de dados aberta" />
             <p className="desc">CSV limpos + dicionário de dados + datapackage validado, sob licença CC-BY 4.0.</p>
             <div className="botoes">
               <a className="btn" href={l.base}>Acessar no GitHub ↗</a>
@@ -101,10 +109,11 @@ export default function Artigo({ params }) {
           </div>
         )}
         {a.infografico && (
-          <div className="bloco">
-            <h3>🖼️ Infográfico</h3>
+          <div className="bloco" data-tipo="resumos">
+            <Cab icone="resumo" titulo="Infográfico" />
             <p className="desc">Síntese visual do pipeline de dados proposto pelo artigo.</p>
-            <img className="minia" src={a.infografico} alt="Infográfico: pipeline de dados em quatro estações — extração, limpeza, vinculação e OLAP/BI" />
+            <img className="minia" src={a.infografico} loading="lazy"
+              alt="Infográfico: pipeline de dados em quatro estações — extração, limpeza, vinculação e OLAP/BI" />
           </div>
         )}
       </div>
