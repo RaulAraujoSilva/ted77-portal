@@ -54,7 +54,7 @@ export default function Quiz({ artigoId, questoes, titulo }) {
         <h4>Artigo concluído!</h4>
         <p>Você acertou <b>{s.acertosUnicos} de {total}</b> na primeira tentativa
           {s.acertosUnicos === total ? ' — impecável!' : ' e revisou as demais até dominar.'}</p>
-        <p className="quiz-nota">Seu progresso fica salvo neste navegador e aparece nas páginas de área.</p>
+        <p className="quiz-nota">Seu progresso fica salvo neste navegador e aparece nas páginas de eixo temático.</p>
         <button className="btn sec" onClick={() => dispatch({ tipo: 'reiniciar', questoes })}>
           Refazer o quiz
         </button>

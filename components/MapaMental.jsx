@@ -23,7 +23,7 @@ export default function MapaMental({ markdown, titulo, tooltips }) {
     ref.current.innerHTML =
       `<div class="markmap mapa-mental-caixa"><script type="text/template">---\n` +
       `markmap:\n  maxWidth: 260\n  spacingVertical: 8\n  initialExpandLevel: ${nivel}\n` +
-      `  colorFreezeLevel: 2\n---\n\n${md}<\/script></div>`;
+      `  colorFreezeLevel: 2\n  autoFit: true\n---\n\n${md}<\/script></div>`;
     const renderizar = () => {
       try {
         window.markmap?.autoLoader?.renderAll?.();

@@ -19,18 +19,18 @@ export default function Area({ params }) {
   return (
     <main id="conteudo" className="container" data-tema={t.sigla}>
       <nav className="crumb" aria-label="Trilha de navegação">
-        <Link href="/">Início</Link> › <Link href="/#areas">Áreas</Link> › <b>{t.sigla}</b>
+        <Link href="/">Início</Link> › <Link href="/#areas">Eixos temáticos</Link> › <b>{t.sigla}</b>
       </nav>
 
       <header className="area-hero" data-tema={t.sigla}>
-        <span className="sigla">ÁREA {t.sigla}</span>
+        <span className="sigla">EIXO {t.sigla}</span>
         <h2>{t.nome}</h2>
         <p>{t.desc}</p>
         <div className="stats">{pubs.length} publicações · {noAr} já no ar</div>
         <ProgressoArea ids={pubs.map((p) => p.id)} />
       </header>
 
-      <FiltroLista alvo="grade-area" placeholder="Filtrar artigos desta área…" />
+      <FiltroLista alvo="grade-area" placeholder="Filtrar artigos deste eixo…" />
       <div className="grid g3" id="grade-area">
         {pubs.map((p) => {
           const capa = capaDe(p);

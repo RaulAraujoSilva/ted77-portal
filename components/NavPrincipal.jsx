@@ -6,7 +6,7 @@ import { usePathname } from 'next/navigation';
 
 const ITENS = [
   { href: '/', rotulo: 'Início', ativo: (p) => p === '/' },
-  { href: '/#areas', rotulo: 'Áreas', ativo: (p) => p.startsWith('/areas') },
+  { href: '/#areas', rotulo: 'Eixos temáticos', ativo: (p) => p.startsWith('/areas') },
   { href: '/#artigos', rotulo: 'Artigos', ativo: (p) => p.startsWith('/artigos') },
   { href: '/#conteudos', rotulo: 'Tipos de conteúdo', ativo: (p) => p.startsWith('/conteudos') || p.startsWith('/dados') },
   { href: '/buscar/', rotulo: '🔍 Buscar', ativo: (p) => p.startsWith('/buscar'), accessKey: '3' },

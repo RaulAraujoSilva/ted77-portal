@@ -49,7 +49,7 @@ export default function RootLayout({ children }) {
               <Link href="/acessibilidade/">acessibilidade</Link> ·{' '}
               <a href="/podcast.xml">feed do podcast</a>
             </div>
-            <nav className="areas-chips" aria-label="Atalhos por área">
+            <nav className="areas-chips" aria-label="Atalhos por eixo temático">
               {TEMAS.map((t) => (
                 <a key={t.id} href={`/areas/${t.id}/`} data-tema={t.sigla}>{t.sigla} · {t.nome.split(' ')[0]}</a>
               ))}

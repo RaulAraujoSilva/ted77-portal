@@ -16,7 +16,10 @@
    "tema_nome": "IA e sistemas aplicados ao cuidado",
    "titulo_pt": "Telemedicina e sustentabilidade sistêmica",
    "titulo_original": "Telemedicine and Systemic Sustainability: From Facing Covid-19 to Consolidating Lean and Resilient Care Models",
-   "tipo_estudo": "capítulo conceitual"
+   "tipo_estudo": "capítulo conceitual",
+   "autores": "Janaisa Gomes Dias de Oliveira; Giovana Calcagno Gomes; Bruna Luciano Farias; Teresa de Lourdes da Rosa dos Santos; Sarah Bomfim de Souza; Antonio Ferreira Lima Filho; Robisom Damasceno Calado",
+   "autores_curto": "Oliveira et al.",
+   "ano": "2025"
   },
   {
    "id": "CAP-02",
@@ -26,7 +29,10 @@
    "tema_nome": "Maturidade e estratégia de saúde digital",
    "titulo_pt": "Modelos de avaliação de maturidade digital: framework conceitual",
    "titulo_original": "Digital Maturity Assessment Models: Conceptual Framework and Applications in the Context of Sustainable Management in Healthcare Services",
-   "tipo_estudo": "capítulo conceitual"
+   "tipo_estudo": "capítulo conceitual",
+   "autores": "Cintia de Melo de Albuquerque Ribeiro; Hellen Costa Ramos; Gabriella da Silva Branco Carvalhaes; Antonio Ferreira Lima Filho; Julio Vieira Neto; Robisom Damasceno Calado",
+   "autores_curto": "Ribeiro et al.",
+   "ano": "2025"
   },
   {
    "id": "CAP-03",
@@ -36,7 +42,10 @@
    "tema_nome": "Governança, cultura e sustentabilidade",
    "titulo_pt": "Impactos da transformação digital na governança do SUS",
    "titulo_original": "IMPACTS OF DIGITAL TRANSFORMATION ON THE GOVERNANCE OF THE UNIFIED HEALTH SYSTEM (SUS)",
-   "tipo_estudo": "capítulo analítico"
+   "tipo_estudo": "capítulo analítico",
+   "autores": "Guilherme Vinagre Pinto de Souza; Osvaldo Luis Goncalves Quelhas; Harvey Jose Santos Ribeiro Cosenza; Catia Elisabete Lopes Camargo; Kelly Cristina Freire; Flavio Silva Machado; Robisom Damasceno Calado",
+   "autores_curto": "Souza et al.",
+   "ano": "2025"
   },
   {
    "id": "CAP-04",
@@ -46,7 +55,10 @@
    "tema_nome": "Governança, cultura e sustentabilidade",
    "titulo_pt": "Transformação digital no SUS: sustentabilidade e logística verde",
    "titulo_original": "DIGITAL TRANSFORMATION IN THE SUS: SUSTAINABILITY STRATEGY AND GREEN LOGISTICS IN HEALTHCARE SERVICES",
-   "tipo_estudo": "capítulo conceitual"
+   "tipo_estudo": "capítulo conceitual",
+   "autores": "Catia Elisabete Lopes Camargo; Guilherme Vinagre Pinto de Souza; Kelly Cristina Freire; Harvey Jose Santos Ribeiro Cosenza; Flavio Silva Machado; Robisom Damasceno Calado; Osvaldo Luis Goncalves Quelhas",
+   "autores_curto": "Camargo et al.",
+   "ano": "2025"
   },
   {
    "id": "CAP-05",
@@ -56,7 +68,10 @@
    "tema_nome": "IA e sistemas aplicados ao cuidado",
    "titulo_pt": "Comunicação ativa da UBS com a população via WhatsApp",
    "titulo_original": "ACTIVE COMMUNICATION SYSTEM OF THE BASIC HEALTH UNIT WITH THE POPULATION VIA WHATSAPP",
-   "tipo_estudo": "desenvolvimento de sistema"
+   "tipo_estudo": "desenvolvimento de sistema",
+   "autores": "Maicon Gonzaga da Silva; Andre Luiz Pecanha Da Silva; Ilma Rodrigues de Souza Fausto; Vinicius De Oliveira Pinheiro; Pedro Fausto Filho; Robisom Damasceno Calado",
+   "autores_curto": "Silva et al.",
+   "ano": "2025"
   },
   {
    "id": "CAP-06",
@@ -66,7 +81,10 @@
    "tema_nome": "IA e sistemas aplicados ao cuidado",
    "titulo_pt": "Agendamento inteligente via WhatsApp para UBS",
    "titulo_original": "INTELLIGENT APPOINTMENT SCHEDULING SYSTEM VIA WHATSAPP FOR BASIC HEALTH UNITS",
-   "tipo_estudo": "desenvolvimento de sistema"
+   "tipo_estudo": "desenvolvimento de sistema",
+   "autores": "Maicon Gonzaga da Silva; Andre Luiz Pecanha Da Silva; Ilma Rodrigues de Souza Fausto; Vinicius De Oliveira Pinheiro; Pedro Fausto Filho; Robisom Damasceno Calado",
+   "autores_curto": "Silva et al.",
+   "ano": "2025"
   },
   {
    "id": "CAP-07",
@@ -76,7 +94,10 @@
    "tema_nome": "Governança, cultura e sustentabilidade",
    "titulo_pt": "Transformação digital sustentável: IA, dados e inovação responsável",
    "titulo_original": "SUSTAINABLE DIGITAL TRANSFORMATION IN THE BRAZILIAN PUBLIC HEALTH SYSTEM (SUS): ARTIFICIAL INTELLIGENCE, HEALTH DATA, AND RESPONSIBLE INNOVATION",
-   "tipo_estudo": "capítulo conceitual"
+   "tipo_estudo": "capítulo conceitual",
+   "autores": "Flavio Luiz Seixas; Alexandre Beraldi Santos; Edmilson Suassuna da Silva; Raul Araujo da Silva",
+   "autores_curto": "Seixas et al.",
+   "ano": "2025"
   },
   {
    "id": "CAP-08",
@@ -86,7 +107,10 @@
    "tema_nome": "IA e sistemas aplicados ao cuidado",
    "titulo_pt": "Tecnologia digital na comunicação entre enfermagem e pacientes",
    "titulo_original": "Digital Technology for Communication Between Nursing Professionals and Patients in the Brazilian Public Health System (SUS)",
-   "tipo_estudo": "proposta de tecnologia"
+   "tipo_estudo": "proposta de tecnologia",
+   "autores": "Jackeline Franco Couto; Maicon Gonzaga da Silva; Ilma Rodrigues de Souza Fausto; Luis Enrique Valdiviezo Viera; Milena Estanislau Diniz Mansur dos Reis; Robisom Damasceno Calado",
+   "autores_curto": "Couto et al.",
+   "ano": "2025"
   },
   {
    "id": "CAP-09",
@@ -96,7 +120,10 @@
    "tema_nome": "Lean Healthcare e gestão de operações",
    "titulo_pt": "Gestão da superlotação em estabelecimentos de saúde",
    "titulo_original": "Overcrowding Management in Healthcare Facilities: An Analysis of Actions for Performance Improvement",
-   "tipo_estudo": "análise aplicada"
+   "tipo_estudo": "análise aplicada",
+   "autores": "Luis Enrique Valdiviezo Viera; Milena Estanislau Diniz Mansur dos Reis; Jackeline Franco Couto; Luiz Felipe Conrado; Nicolas Rodrigues Lima; Robisom Damasceno Calado",
+   "autores_curto": "Viera et al.",
+   "ano": "2025"
   },
   {
    "id": "CAP-10",
@@ -106,7 +133,10 @@
    "tema_nome": "Lean Healthcare e gestão de operações",
    "titulo_pt": "Mapeamento de fluxo de valor em BPMN para otimizar TEDs",
    "titulo_original": "BPMN-BASED VALUE STREAM MAPPING FOR OPTIMIZING DECENTRALIZED EXECUTION AGREEMENTS (TED) IN LEAN AND SUSTAINABLE PUBLIC HEALTH SERVICES",
-   "tipo_estudo": "estudo aplicado"
+   "tipo_estudo": "estudo aplicado",
+   "autores": "Flavia Silva de Souza; Christiane Lima Barbosa; Ana Paula Amorim Moreira; Ana Carolina Sanches Zeferino; Teresa de Lourdes da Rosa dos Santos",
+   "autores_curto": "Souza et al.",
+   "ano": "2025"
   },
   {
    "id": "CAP-11",
@@ -116,7 +146,10 @@
    "tema_nome": "Lean Healthcare e gestão de operações",
    "titulo_pt": "Mapeamento do fluxo do processo administrativo de TED",
    "titulo_original": "MAPPING THE FLOW IN THE DECENTRALIZED EXECUTION TERM (TED) ADMINISTRATIVE PROCESS IN PUBLIC ADMINISTRATION - A STRATEGIC APPROACH TO SUSTAINABILITY IN HEALTH SERVICES",
-   "tipo_estudo": "estudo aplicado"
+   "tipo_estudo": "estudo aplicado",
+   "autores": "Sandra Maria do Amaral Chaves; Yasser Issmail Mohsen; Catia Elisabete Lopes Camargo; Flavia Silva de Souza; Jackeline Franco Couto; Kelly Cristina Freire; Luis Enrique Valdiviezo Viera; Luiza Werner Heringer Vieira",
+   "autores_curto": "Chaves et al.",
+   "ano": "2025"
   },
   {
    "id": "IJC-01",
@@ -126,7 +159,9 @@
    "tema_nome": "Lean Healthcare e gestão de operações",
    "titulo_pt": "Lean e digital na licitação hospitalar: avaliação técnica acelerada",
    "titulo_original": "Digital Transformation and Lean in Hospital Public Procurement: Accelerating Technical Sample Evaluation",
-   "tipo_estudo": "estudo de caso misto"
+   "tipo_estudo": "estudo de caso misto",
+   "autores": "Andre Luiz Pecanha da Silva; Ilma Rodrigues de Souza Fausto; Maicon Gonzaga da Silva; Robisom Damasceno Calado",
+   "autores_curto": "Silva et al."
   },
   {
    "id": "IJC-02",
@@ -136,7 +171,9 @@
    "tema_nome": "Lean Healthcare e gestão de operações",
    "titulo_pt": "Framework por fases: Lean Six Sigma, governança e gestão de projetos",
    "titulo_original": "A Phased Framework Integrating Lean Six Sigma, Governance, and Project Management for Implementation in Healthcare Units",
-   "tipo_estudo": "framework conceitual"
+   "tipo_estudo": "framework conceitual",
+   "autores": "Pedro Alex Rodrigues Pimentel; Robisom Damasceno Calado; Alexandre Beraldi Santos; Ricardo Luiz Fernandes Bella; Edmilson Suassuna da Silva; Stephanie D'Amato Nascimento",
+   "autores_curto": "Pimentel et al."
   },
   {
    "id": "IJC-03",
@@ -146,7 +183,9 @@
    "tema_nome": "Capacitação e educação digital",
    "titulo_pt": "Lean e Design Thinking para capacitação em saúde digital",
    "titulo_original": "Integrating Lean and Design Thinking for Digital Health Capacity Building: A Scalable Framework for Public",
-   "tipo_estudo": "design science research"
+   "tipo_estudo": "design science research",
+   "autores": "Silvia Cristina Rufino; Robisom Damasceno Calado; Alexandre Beraldi Santos; Flavia Silva de Souza; Jucileia Filomena Barbosa Severino; Luis Eduardo de Morais Rodrigues",
+   "autores_curto": "Rufino et al."
   },
   {
    "id": "IJC-04",
@@ -156,7 +195,9 @@
    "tema_nome": "Interoperabilidade e dados em saúde",
    "titulo_pt": "Design Thinking para interoperabilidade SER/SISREG na cardiologia",
    "titulo_original": "Application of Design Thinking for the Development of Interoperability Models between SER/SISREG in Specialized Cardiology Services within the Brazilian",
-   "tipo_estudo": "pesquisa aplicada"
+   "tipo_estudo": "pesquisa aplicada",
+   "autores": "Flavia Silva de Souza; Silvia Cristina Rufino; Teresa de Lourdes da Rosa dos Santos; Thais Lessa Queiroz; Jackeline Franco Couto; Luis Eduardo de Morais Rodrigues",
+   "autores_curto": "Souza et al."
   },
   {
    "id": "IJC-05",
@@ -166,7 +207,9 @@
    "tema_nome": "Maturidade e estratégia de saúde digital",
    "titulo_pt": "Índice Nacional de Maturidade em Saúde Digital: fundamentos e aplicação",
    "titulo_original": "NATIONAL DIGITAL HEALTH MATURITY INDEX: ESTABLISHING THE THEORETICAL",
-   "tipo_estudo": "RSL + estudos de caso"
+   "tipo_estudo": "RSL + estudos de caso",
+   "autores": "Gabriella da Silva Branco Carvalhaes; Cintia de Melo de Albuquerque Ribeiro; Antonio Ferreira Lima Filho; Edmilson Suassuna da Silva; Bianca Pessanha Farahon; Julio Vieira Neto",
+   "autores_curto": "Carvalhaes et al."
   },
   {
    "id": "IJC-06",
@@ -176,7 +219,9 @@
    "tema_nome": "IA e sistemas aplicados ao cuidado",
    "titulo_pt": "Indústria 5.0 na saúde: sistema de apoio ao cuidado da fibromialgia",
    "titulo_original": "Digital Transformation and Industry 5.0 in Healthcare: A Care Management Support System for Fibromyalgia",
-   "tipo_estudo": "desenvolvimento de sistema"
+   "tipo_estudo": "desenvolvimento de sistema",
+   "autores": "Victoria de Paula Paschoal; Flavio Luiz Seixas; Luiz Eduardo da Costa Oliveira; Alexandre Beraldi Santos; Robisom Damasceno Calado",
+   "autores_curto": "Paschoal et al."
   },
   {
    "id": "IJC-07",
@@ -186,7 +231,9 @@
    "tema_nome": "Lean Healthcare e gestão de operações",
    "titulo_pt": "Lean Healthcare como catalisador da transformação digital",
    "titulo_original": "Lean Healthcare as a Catalyst for Digital Transformation in Healthcare in Brazil: A Convergence Framework",
-   "tipo_estudo": "framework conceitual"
+   "tipo_estudo": "framework conceitual",
+   "autores": "Catia Elisabete Lopes Camargo; Guilherme Vinagre Pinto de Souza; Alexandre Beraldi Santos; Harvey Jose Santos Ribeiro; Ilma Rodrigues de Souza Fausto; Osvaldo Luis Goncalves Quelhas",
+   "autores_curto": "Camargo et al."
   },
   {
    "id": "IJC-08",
@@ -196,7 +243,9 @@
    "tema_nome": "Governança, cultura e sustentabilidade",
    "titulo_pt": "Cultura organizacional como motor da transformação digital",
    "titulo_original": "Organizational Culture as a Critical Driver for Digital Transformation in Public Health Systems: A Literature",
-   "tipo_estudo": "revisão integrativa"
+   "tipo_estudo": "revisão integrativa",
+   "autores": "Guilherme Vinagre Pinto de Souza; Alexandre Beraldi Santos; Catia Elisabete Lopes Camargo; Osvaldo Quelhas; Harvey Jose Santos Ribeiro Cosenza; Raul Araujo da Silva",
+   "autores_curto": "Souza et al."
   },
   {
    "id": "IJC-09",
@@ -206,7 +255,9 @@
    "tema_nome": "IA e sistemas aplicados ao cuidado",
    "titulo_pt": "ClinKey: gestão automatizada de chaves com IoT para Lean Healthcare",
    "titulo_original": "ClinKey System: An IoT-Enabled Automated Key Management Solution for Lean Healthcare, Patient",
-   "tipo_estudo": "desenvolvimento de sistema"
+   "tipo_estudo": "desenvolvimento de sistema",
+   "autores": "Andre Luiz Pecanha da Silva; Ilma Rodrigues de Souza Fausto; Maicon Gonzaga da Silva; Catia Elisabete Lopes Camargo; Pedro Fausto Filho; Robisom Damasceno Calado",
+   "autores_curto": "Silva et al."
   },
   {
    "id": "IJC-10",
@@ -216,7 +267,9 @@
    "tema_nome": "Maturidade e estratégia de saúde digital",
    "titulo_pt": "Desafios e avanços da saúde digital na América Latina",
    "titulo_original": "Challenges and Advances in Digital Health in Latin America: A State-of-the-Art Integrative Review Aligned",
-   "tipo_estudo": "revisão integrativa"
+   "tipo_estudo": "revisão integrativa",
+   "autores": "Luiz Felipe Conrado; Luis Enrique Valdiviezo Viera; Edmilson Suassuna da Silva; Jackeline Franco Couto; Nicolas Rodrigues Lima; Milena Estanislau Diniz Mansur dos Reis",
+   "autores_curto": "Conrado et al."
   },
   {
    "id": "IJC-11",
@@ -226,7 +279,9 @@
    "tema_nome": "Lean Healthcare e gestão de operações",
    "titulo_pt": "Água como estratégia de segurança em hospital privado brasileiro",
    "titulo_original": "Water as a safety strategy in a Brazilian private hospital: structuring the management plan in light of WHO",
-   "tipo_estudo": "estudo de caso"
+   "tipo_estudo": "estudo de caso",
+   "autores": "Luiza Werner Heringer Vieira; Nilra do Amaral Mendes Silva; Fabiano Carreiro Amaral; Liliane Silva Rocha; Stephanie D'Amato Nascimento; Ricardo Luiz Fernandes Bella",
+   "autores_curto": "Vieira et al."
   },
   {
    "id": "IJC-12",
@@ -246,7 +301,9 @@
    "tema_nome": "Maturidade e estratégia de saúde digital",
    "titulo_pt": "Maturidade digital na saúde: revisão dos modelos de avaliação",
    "titulo_original": "Maturidade digital na saúde: Uma Revisão Narrativa da Literatura dos Modelos de Avaliação",
-   "tipo_estudo": "revisão narrativa"
+   "tipo_estudo": "revisão narrativa",
+   "autores": "Bianca Pessanha Farahon; Hellen Costa Ramos; Elaine dos Prazeres de Araujo Fragoso; Cintia de Melo de Albuquerque Ribeiro; Robisom Damasceno Calado; Teresa de Lourdes da Rosa dos Santos; Gabriella da Silva Branco Carvalhaes",
+   "autores_curto": "Farahon et al."
   },
   {
    "id": "IND-02",
@@ -256,7 +313,9 @@
    "tema_nome": "Interoperabilidade e dados em saúde",
    "titulo_pt": "Painéis de gestão em saúde com dados públicos do DATASUS",
    "titulo_original": "Building Health Management Dashboards with DATASUS Public Data",
-   "tipo_estudo": "estudo aplicado"
+   "tipo_estudo": "estudo aplicado",
+   "autores": "Luiz Felipe Alves; Ricardo Alexandre da Silva; Diego Zoracky W. Oliveira; Luiz Eduardo de M. Rodrigues; Flávio L. Seixas; Alexandre Beraldi dos Santos",
+   "autores_curto": "Alves et al."
   },
   {
    "id": "IND-03",
@@ -266,7 +325,9 @@
    "tema_nome": "Capacitação e educação digital",
    "titulo_pt": "Microcredenciais e AVA na transformação digital da saúde",
    "titulo_original": "Microcredentials and LMS in Health Sector Digital Transformation: Experiences from a Brazilian",
-   "tipo_estudo": "relato de experiência"
+   "tipo_estudo": "relato de experiência",
+   "autores": "Edmilson Suassuna da Silva; Ricardo Cardoso dos Santos; Silvia Cristina Rufino; Alexandre Beraldi Santos; Elton Rodrigues de Oliveira; Robisom Damasceno Calado",
+   "autores_curto": "Silva et al."
   },
   {
    "id": "IND-04",
@@ -276,7 +337,9 @@
    "tema_nome": "Interoperabilidade e dados em saúde",
    "titulo_pt": "Interoperabilidade como base de políticas de saúde sustentáveis",
    "titulo_original": "Challenges and Strategies for Interoperability as a Basis for Sustainable Health Policies: A Systematic",
-   "tipo_estudo": "revisão sistemática"
+   "tipo_estudo": "revisão sistemática",
+   "autores": "Teresa de L. R. Santos; Sandra Maria do A. Chaves; Marco Saavedra Bravo; Luiza Werner Heringer Vieira; Flavia Silva de Souza; Christiane Lima Barbosa; Alexandre Beraldi Santos",
+   "autores_curto": "Santos et al."
   },
   {
    "id": "IND-05",
@@ -286,7 +349,9 @@
    "tema_nome": "IA e sistemas aplicados ao cuidado",
    "titulo_pt": "Avaliação empírica do ecossistema de urgência com apoio de IA",
    "titulo_original": "Empirical Evaluation of the Emergency Care Ecosystem Using Artificial Intelligence for Decision-makers' Support",
-   "tipo_estudo": "estudo empírico"
+   "tipo_estudo": "estudo empírico",
+   "autores": "Luiz Eduardo de Morais Rodrigues; Jose Arturo Garza-Reyes; Gabriel Nascimento Santos; Robisom Damasceno Calado; Andrei Bonamigo",
+   "autores_curto": "Rodrigues et al."
   },
   {
    "id": "IND-06",
@@ -296,7 +361,9 @@
    "tema_nome": "Maturidade e estratégia de saúde digital",
    "titulo_pt": "Uma década de transformação digital no SUS",
    "titulo_original": "Digital Transformation in the Brazilian Unified Health System (SUS) Over the Past Decade",
-   "tipo_estudo": "revisão integrativa"
+   "tipo_estudo": "revisão integrativa",
+   "autores": "Luiz Eduardo de Morais Rodrigues; Ana Carolina Sanches Zeferino; Kelly Cristina Freire Doria; Flavia Silva de Souza; Jackeline Franco Couto; Gabriella da Silva Branco Carvalhaes",
+   "autores_curto": "Rodrigues et al."
   },
   {
    "id": "IND-07",
@@ -306,7 +373,9 @@
    "tema_nome": "Interoperabilidade e dados em saúde",
    "titulo_pt": "Integração de dados na regulação do acesso especializado",
    "titulo_original": "Integrating Data into Referral Management Systems: A Global Review and Proposal for Enhanced Specialized Care Regulation",
-   "tipo_estudo": "revisão integrativa"
+   "tipo_estudo": "revisão integrativa",
+   "autores": "Luiz Eduardo de Morais Rodrigues; Luiz Felipe Vila Verde Alves; Flavio Luiz Seixas; Janika Leoste; Ricardo Alexandre da Silva; Diego Zoracy W Oliveira",
+   "autores_curto": "Rodrigues et al."
   },
   {
    "id": "IND-08",
@@ -316,7 +385,9 @@
    "tema_nome": "Lean Healthcare e gestão de operações",
    "titulo_pt": "Teoria das Restrições para otimizar processos do SUS",
    "titulo_original": "Applying the Theory of Constraints to Optimize Processes in the Brazilian Public Health System",
-   "tipo_estudo": "estudo aplicado"
+   "tipo_estudo": "estudo aplicado",
+   "autores": "Flavio L. Seixas; Luiz Felipe Vila Verde Alves; Ricardo Alexandre da Silva; Diego Zoracky W. Oliveira; Luiz Eduardo de M. Rodrigues; Alexandre Beraldi Santos",
+   "autores_curto": "Seixas et al."
   },
   {
    "id": "IND-09",
@@ -326,7 +397,9 @@
    "tema_nome": "Lean Healthcare e gestão de operações",
    "titulo_pt": "Segurança do paciente e Lean Healthcare",
    "titulo_original": "Patient safety and the lean healthcare methodology: an integrative review",
-   "tipo_estudo": "revisão integrativa"
+   "tipo_estudo": "revisão integrativa",
+   "autores": "Jackline Franco Couto; Flavia Silva de Souza; Magel Souza Silva; Ana Carolina Sanches Zeferino; Kelly Cristina Freire Doria; Robisom Damasceno Calado",
+   "autores_curto": "Couto et al."
   },
   {
    "id": "IND-10",
@@ -336,7 +409,9 @@
    "tema_nome": "Governança, cultura e sustentabilidade",
    "titulo_pt": "Impacto da transformação digital na governança do SUS",
    "titulo_original": "Análise do impacto da transformação digital na Governança do SUS",
-   "tipo_estudo": "estudo qualitativo"
+   "tipo_estudo": "estudo qualitativo",
+   "autores": "Guilherme Vinagre Pinto de Souza; Harvey Jose Santos Ribeiro Cosenza; Kelly Cristina Freire Doria; Flavio Silva Machado; Catia Elisabete Lopes Camargo; Osvaldo Quelhas",
+   "autores_curto": "Souza et al."
   },
   {
    "id": "IND-11",
@@ -346,7 +421,9 @@
    "tema_nome": "Governança, cultura e sustentabilidade",
    "titulo_pt": "Avaliação do impacto das ações do Programa SUS Digital",
    "titulo_original": "Transformação Digital no SUS: Uma Avaliação do Impacto das Ações do Programa SUS Digital",
-   "tipo_estudo": "estudo híbrido"
+   "tipo_estudo": "estudo híbrido",
+   "autores": "Catia Elisabete Lopes Camargo; Harvey Jose Santos Ribeiro Cosenza; Kelly Cristina Freire Doria; Robisom Damasceno Calado; Guilherme Vinagre Pinto de Souza; Osvaldo Luiz Goncalves Quelhas",
+   "autores_curto": "Camargo et al."
   },
   {
    "id": "IND-12",
@@ -356,7 +433,9 @@
    "tema_nome": "IA e sistemas aplicados ao cuidado",
    "titulo_pt": "Tecnologias digitais nas práticas clínicas no Brasil",
    "titulo_original": "Técnologias Digitais em Práticas Clínicas no Brasil: Uma Revisão Sistemática de Seu Uso e Impacto",
-   "tipo_estudo": "revisão sistemática"
+   "tipo_estudo": "revisão sistemática",
+   "autores": "Gabriella da Silva Branco Carvalhaes; Robisom Damasceno Calado; Cintia de Melo de Albuquerque Ribeiro; Julio Vieira Neto; Bianca Pessanha Farahon",
+   "autores_curto": "Carvalhaes et al."
   },
   {
    "id": "IND-13",
@@ -366,7 +445,9 @@
    "tema_nome": "Lean Healthcare e gestão de operações",
    "titulo_pt": "Gestão de processos em saúde: estudo bibliométrico",
    "titulo_original": "Process Management in Healthcare: bibliometric study Zeferino, Ana Carolina Sanches",
-   "tipo_estudo": "estudo bibliométrico"
+   "tipo_estudo": "estudo bibliométrico",
+   "autores": "Ana Carolina Sanches Zeferino; Christiane Lima Barbosa; Ana Paula Amorim Moreira; Yasser Issmail Mohsen; Victoria de Paula Paschoal; Sandra Maria do A. Chaves; Edmilson Suassuna da Silva",
+   "autores_curto": "Zeferino et al."
   },
   {
    "id": "IND-14",
@@ -376,7 +457,9 @@
    "tema_nome": "Maturidade e estratégia de saúde digital",
    "titulo_pt": "Saúde digital no Brasil: contexto e desafios",
    "titulo_original": "Digital Health: context and challenges in Brazil with focus on public health",
-   "tipo_estudo": "revisão"
+   "tipo_estudo": "revisão",
+   "autores": "Luiz Felipe Conrado; Milena Estanislau Diniz Mansur dos Reis; Jackeline Franco Couto; Luis Enrique Valdiviezo Viera; Nicolas Rodrigues Lima; Ana Carolina Sanches Zeferino",
+   "autores_curto": "Conrado et al."
   },
   {
    "id": "IND-15",
@@ -386,7 +469,9 @@
    "tema_nome": "Maturidade e estratégia de saúde digital",
    "titulo_pt": "Proposta de avaliação da Estratégia de Saúde Digital 2020-2028",
    "titulo_original": "Proposal for Evaluation of the Digital Health Strategy for Brazil, 2020-2028",
-   "tipo_estudo": "proposta de modelo"
+   "tipo_estudo": "proposta de modelo",
+   "autores": "Luiz Felipe Conrado; Luis Enrique Valdiviezo Viera; Nicolas Rodrigues Lima; Jackeline Franco Couto; Milena Estanislau Diniz Mansur dos Reis; Kelly Cristina Freire Doria",
+   "autores_curto": "Conrado et al."
   },
   {
    "id": "IND-16",
@@ -396,7 +481,9 @@
    "tema_nome": "Maturidade e estratégia de saúde digital",
    "titulo_pt": "Maturidade digital dos hospitais públicos brasileiros",
    "titulo_original": "Digital Maturity Of Brazilian Public Hospitals: Challenges and opportunities for digital",
-   "tipo_estudo": "survey"
+   "tipo_estudo": "survey",
+   "autores": "Maicon Gonzaga da Silva; Ilma Rodrigues de Souza Fausto; Yasser Issmail Mohsen; Pedro Fausto Filho",
+   "autores_curto": "Silva et al."
   },
   {
    "id": "IND-17",
@@ -406,7 +493,9 @@
    "tema_nome": "IA e sistemas aplicados ao cuidado",
    "titulo_pt": "O papel da IA no diagnóstico, monitoramento e tratamento personalizado",
    "titulo_original": "The Role of Artificial Intelligence in Diagnosis, Monitoring, and Personalized Treatment in the Digital Health Era",
-   "tipo_estudo": "revisão"
+   "tipo_estudo": "revisão",
+   "autores": "Andre Luiz Pecanha da Silva; Maicon Gonzaga da Silva; Pedro Fausto Filho; Vinicius De Oliveira Pinheiro",
+   "autores_curto": "Silva et al."
   },
   {
    "id": "IND-18",
@@ -416,7 +505,9 @@
    "tema_nome": "Capacitação e educação digital",
    "titulo_pt": "Braço do Saber: pensamento computacional para educadores indígenas",
    "titulo_original": "Integration of Computational Thinking and Ethnoinformatics: The Development of Braço do",
-   "tipo_estudo": "desenvolvimento de artefato"
+   "tipo_estudo": "desenvolvimento de artefato",
+   "autores": "Ilma Rodrigues de Souza Fausto; Maicon Gonzaga da Silva; Ruth Maria Mariani Braz; Vinicius De Oliveira Pinheiro",
+   "autores_curto": "Fausto et al."
   },
   {
    "id": "IND-19",
@@ -426,7 +517,9 @@
    "tema_nome": "Maturidade e estratégia de saúde digital",
    "titulo_pt": "Instrumentos para avaliar a maturidade digital em saúde",
    "titulo_original": "Transformação Digital em Saúde: Uma Revisão dos Instrumentos para Avaliar a Maturidade Digital",
-   "tipo_estudo": "revisão sistemática"
+   "tipo_estudo": "revisão sistemática",
+   "autores": "Cintia de Melo de Albuquerque Ribeiro; Robisom Damasceno Calado; Gabriella Branco Carvalhaes; Julio Vieira Neto; Bianca Pessanha Farahon; Hellen Costa Ramos",
+   "autores_curto": "Ribeiro et al."
   },
   {
    "id": "IND-20",
@@ -436,7 +529,9 @@
    "tema_nome": "Capacitação e educação digital",
    "titulo_pt": "Capacitação digital no SUS com Lean Thinking e Design Thinking",
    "titulo_original": "Capacitação Digital no SUS: Um Framework Estruturado Integrando Lean Thinking e Design",
-   "tipo_estudo": "design science research"
+   "tipo_estudo": "design science research",
+   "autores": "Silvia Cristina Rufino; Luiz Felipe Conrado; Pedro Rufino Bon; Elton Rodrigues de Oliveira; Edmilson Suassuna da Silva; Robisom Damasceno Calado",
+   "autores_curto": "Rufino et al."
   }
  ]
 }

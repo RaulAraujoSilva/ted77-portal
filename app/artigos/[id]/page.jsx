@@ -54,7 +54,7 @@ function jsonLd(p, a, l) {
     itens.push({
       '@context': 'https://schema.org', '@type': 'VideoObject',
       name: `${p.titulo_pt} (vídeo de divulgação)`,
-      description: 'A história do artigo em vídeo de 3 minutos, com narração e legendas em português.',
+      description: 'A história do artigo em vídeo de 3 minutos, com narração e legendas em português. Narração e avatar gerados por inteligência artificial.',
       contentUrl: `${BASE}${a.video}`, thumbnailUrl: capaDe(p) ? `${BASE}${capaDe(p)}` : undefined,
       uploadDate: '2026-06-13', inLanguage: 'pt-BR',
     });
@@ -69,7 +69,7 @@ function Sec({ id, icone, titulo, meta, children, tipo, grupo }) {
         <TipoIcone nome={icone} />
         <span className="sec-titulo">
           <b>{titulo}</b>
-          <small>{meta}</small>
+          {meta && <small>{meta}</small>}
         </span>
         <span className="chevron" aria-hidden="true" />
       </summary>
@@ -122,19 +122,18 @@ export default function Artigo({ params }) {
         qtd={[ex?.historia, a.podcast, a.video].filter(Boolean).length} />
 
       {ex?.historia && (
-        <Link href={`/artigos/${p.slug}/historia/`} className="sec sec-link" data-grupo="av">
+        <Link href={`/artigos/${p.slug}/historia/`} className="sec sec-link" data-grupo="av"
+          target="_blank" rel="noopener">
           <TipoIcone nome="historia" />
           <span className="sec-titulo">
             <b>História visual</b>
-            <small>data storytelling em 6 passos · o gráfico responde ao seu scroll</small>
           </span>
           <span className="seta-link" aria-hidden="true">↗</span>
         </Link>
       )}
 
       {a.podcast && (
-        <Sec id="sec-podcast" icone="podcast" tipo="podcasts" grupo="av" titulo="Podcast"
-          meta="áudio-resumo em conversa (Arthur e Carla) · 6 min">
+        <Sec id="sec-podcast" icone="podcast" tipo="podcasts" grupo="av" titulo="Podcast">
           <audio controls preload="none" src={a.podcast} />
           <p className="quiz-nota" style={{ marginTop: 'var(--s-2)' }}>
             Assine o feed: <a href="/podcast.xml">/podcast.xml</a>
@@ -143,8 +142,7 @@ export default function Artigo({ params }) {
       )}
 
       {a.video && (
-        <Sec id="sec-video" icone="video" tipo="videos" grupo="av" titulo="Vídeo"
-          meta="3 min · MP4 1080p com legendas em português">
+        <Sec id="sec-video" icone="video" tipo="videos" grupo="av" titulo="Vídeo">
           <video controls preload="none" poster={capa || undefined} crossOrigin="anonymous">
             <source src={a.video} type="video/mp4" />
             {a.legendas && (
@@ -152,6 +150,11 @@ export default function Artigo({ params }) {
             )}
             Seu navegador não suporta vídeo HTML5.
           </video>
+          <p className="quiz-nota aviso-ia" style={{ marginTop: 'var(--s-2)' }}>
+            ⚠️ <b>Conteúdo gerado com inteligência artificial:</b> a narração (voz) e o
+            apresentador (avatar) deste vídeo foram produzidos por IA a partir do conteúdo
+            do artigo. Os dados e as conclusões são do estudo original.
+          </p>
         </Sec>
       )}
 
@@ -160,15 +163,13 @@ export default function Artigo({ params }) {
         qtd={[ex?.mindmap, ex?.quiz].filter(Boolean).length} />
 
       {ex?.mindmap && (
-        <Sec id="sec-mapa" icone="mapa" tipo="mapas" grupo="auto" titulo="Mapa mental"
-          meta="estrutura navegável do artigo · clique para expandir os ramos">
+        <Sec id="sec-mapa" icone="mapa" tipo="mapas" grupo="auto" titulo="Mapa mental">
           <MapaMental markdown={ex.mindmap} titulo={p.titulo_pt} tooltips={ex.mindmap_tooltips} />
         </Sec>
       )}
 
       {ex?.quiz && (
-        <Sec id="sec-quiz" icone="quiz" tipo="quizzes" grupo="auto" titulo="Quiz"
-          meta={`${ex.quiz.length} perguntas com explicação · selo de conclusão`}>
+        <Sec id="sec-quiz" icone="quiz" tipo="quizzes" grupo="auto" titulo="Quiz">
           <Quiz artigoId={p.id} questoes={ex.quiz} titulo={p.titulo_pt} />
         </Sec>
       )}
@@ -178,21 +179,19 @@ export default function Artigo({ params }) {
         qtd={[l?.base, l?.painel].filter(Boolean).length} />
 
       {l?.base && (
-        <Sec id="sec-dados" icone="base" tipo="bases" grupo="dados" titulo="Base de dados aberta"
-          meta="CSV + dicionário + datapackage validado · CC-BY 4.0">
+        <Sec id="sec-dados" icone="base" tipo="bases" grupo="dados" titulo="Base de dados aberta">
           <div className="botoes">
-            <a className="btn" href={l.base}>Repositório no GitHub ↗</a>
-            <Link className="btn sec" href="/dados/">Baixar pelos dados abertos</Link>
+            <a className="btn" href={l.base} target="_blank" rel="noopener">Acessar a base de dados aberta (GitHub) ↗</a>
+            <Link className="btn sec" href="/dados/" target="_blank" rel="noopener">Baixar pelos dados abertos</Link>
           </div>
         </Sec>
       )}
 
       {l?.painel && (
-        <Sec id="sec-painel" icone="painel" tipo="paineis" grupo="dados" titulo="Painel interativo"
-          meta="dados reais com filtros, mapa do estado e morbidade CID-10">
+        <Sec id="sec-painel" icone="painel" tipo="paineis" grupo="dados" titulo="Painel interativo">
           <p className="desc">
             Filtros por município e período, mapa coroplético e cross-filters.{' '}
-            <a href={l.painel}>Abrir em tela cheia ↗</a>
+            <a href={l.painel} target="_blank" rel="noopener">Abrir em tela cheia ↗</a>
           </p>
           <iframe className="painel" src={l.painel} loading="lazy"
             title="Painel interativo — Internações SUS-RJ 2025" />
@@ -201,30 +200,21 @@ export default function Artigo({ params }) {
 
       {/* ====== LEITURA (azul) ====== */}
       <GrupoCab grupo="leitura" nome="Leitura"
-        qtd={[a.apostila, ex?.citacao, ex?.cinco_perguntas,
-              a.fichamento_a3 || a.fichamento_pptx, ex?.referencias].filter(Boolean).length} />
+        qtd={[a.apostila, ex?.cinco_perguntas,
+              a.fichamento_a3 || a.fichamento_pptx, ex?.referencias, ex?.citacao].filter(Boolean).length} />
 
       {a.apostila && (
-        <Sec id="sec-apostila" icone="apostila" tipo="apostilas" grupo="leitura" titulo="Apostila e resumo"
-          meta="versão completa para estudo (21 págs) e resumo de 3 páginas">
+        <Sec id="sec-apostila" icone="apostila" tipo="apostilas" grupo="leitura" titulo="Apostila e resumo">
           <p className="desc">Módulos didáticos, boxes, questões com gabarito e glossário, no padrão SUS Digital.</p>
           <div className="botoes">
-            <a className="btn" href={a.apostila} data-evento="download-apostila">Abrir apostila (PDF)</a>
-            {a.resumo && <a className="btn sec" href={a.resumo} data-evento="download-resumo">Resumo 3-4 págs (PDF)</a>}
+            <a className="btn" href={a.apostila} data-evento="download-apostila" target="_blank" rel="noopener">Abrir apostila (PDF)</a>
+            {a.resumo && <a className="btn sec" href={a.resumo} data-evento="download-resumo" target="_blank" rel="noopener">Resumo 3-4 págs (PDF)</a>}
           </div>
         </Sec>
       )}
 
-      {ex?.citacao && (
-        <Sec id="sec-citar" icone="apostila" tipo="apostilas" grupo="leitura" titulo="Como citar"
-          meta="ABNT e BibTeX copiáveis · licença CC-BY 4.0">
-          <Citacao citacao={ex.citacao} />
-        </Sec>
-      )}
-
       {ex?.cinco_perguntas && (
-        <Sec id="sec-ficha" icone="resumo" tipo="resumos" grupo="leitura" titulo="Em 5 perguntas"
-          meta="o essencial do estudo em 2 minutos · com glossário nos termos técnicos">
+        <Sec id="sec-ficha" icone="resumo" tipo="resumos" grupo="leitura" titulo="Em 5 perguntas">
           <div className="ficha5 duas-colunas">
             {ex.cinco_perguntas.map((item, i) => (
               <div className="item" key={i}>
@@ -237,33 +227,37 @@ export default function Artigo({ params }) {
       )}
 
       {(a.fichamento_a3 || a.fichamento_pptx) && (
-        <Sec id="sec-fichamento" icone="fichamento" tipo="fichamentos" grupo="leitura" titulo="Fichamento DMAIC"
-          meta="o artigo em 1 página (A3) e em apresentação">
+        <Sec id="sec-fichamento" icone="fichamento" tipo="fichamentos" grupo="leitura" titulo="Fichamento DMAIC">
           <div className="botoes">
-            {a.fichamento_a3 && <a className="btn" href={a.fichamento_a3}>Relatório A3 (PDF)</a>}
-            {a.fichamento_pptx && <a className="btn sec" href={a.fichamento_pptx}>Apresentação (PPTX)</a>}
+            {a.fichamento_a3 && <a className="btn" href={a.fichamento_a3} target="_blank" rel="noopener">Relatório A3 (PDF)</a>}
+            {a.fichamento_pptx && <a className="btn sec" href={a.fichamento_pptx} target="_blank" rel="noopener">Apresentação (PPTX)</a>}
           </div>
         </Sec>
       )}
 
       {ex?.referencias && (
-        <Sec id="sec-referencias" icone="resumo" tipo="resumos" grupo="leitura" titulo="Referências bibliográficas"
-          meta={`${ex.referencias.length} fontes · DOI linkado ao original quando disponível`}>
+        <Sec id="sec-referencias" icone="resumo" tipo="resumos" grupo="leitura" titulo="Referências bibliográficas">
           <ul className="refs-lista">
             {ex.referencias.map((r, i) => (
               <li key={i}>
                 {r.texto}{' '}
                 {r.doi && (
-                  <a className="doi-badge" href={`https://doi.org/${r.doi}`} rel="noopener">
+                  <a className="doi-badge" href={`https://doi.org/${r.doi}`} target="_blank" rel="noopener">
                     DOI ↗
                   </a>
                 )}
                 {!r.doi && r.url && (
-                  <a className="doi-badge cinza" href={r.url} rel="noopener">acessar ↗</a>
+                  <a className="doi-badge cinza" href={r.url} target="_blank" rel="noopener">acessar ↗</a>
                 )}
               </li>
             ))}
           </ul>
+        </Sec>
+      )}
+
+      {ex?.citacao && (
+        <Sec id="sec-citar" icone="apostila" tipo="apostilas" grupo="leitura" titulo="Como citar">
+          <Citacao citacao={ex.citacao} />
         </Sec>
       )}
 

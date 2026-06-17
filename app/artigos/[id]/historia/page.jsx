@@ -19,13 +19,19 @@ export default function PaginaHistoria({ params }) {
         <Link href="/">Início</Link> › <Link href={`/areas/${p.tema.toLowerCase()}/`}>{p.tema_nome}</Link> › <Link href={`/artigos/${p.slug}/`}>{p.id}</Link> › <b>Modo história</b>
       </nav>
       <h2 className="secao" style={{ marginTop: 0 }}>
-        <span className="kicker">Narrativa visual · role para avançar</span>
+        <span className="kicker">História visual</span>
         Um ano de internações do SUS, contado em 6 passos
       </h2>
       <p className="lead">
-        A versão "data storytelling" do artigo <i>{p.titulo_original}</i> — o gráfico fica fixo e
-        responde ao seu scroll.
+        A versão "data storytelling" do artigo <i>{p.titulo_original}</i>.
       </p>
+      <div className="bloco">
+        <div className="aviso">
+          <b>Sobre os dados:</b> esta narrativa visual usa os números da{' '}
+          <b>base de dados aberta DS-01</b> (internações do SIH/SUS — DATASUS, 2025), e não
+          dados extraídos do texto do artigo original.
+        </div>
+      </div>
       <Historia />
       <div className="bloco">
         <div className="aviso">

@@ -32,8 +32,8 @@ export default function FiltroLista({ alvo, areas = [], placeholder = 'Filtrar a
       <input type="search" value={q} onChange={(e) => setQ(e.target.value)}
         placeholder={placeholder} aria-label="Filtrar artigos por texto" />
       {areas.length > 0 && (
-        <select value={area} onChange={(e) => setArea(e.target.value)} aria-label="Filtrar por área">
-          <option value="">Todas as áreas</option>
+        <select value={area} onChange={(e) => setArea(e.target.value)} aria-label="Filtrar por eixo temático">
+          <option value="">Todos os eixos</option>
           {areas.map((t) => <option key={t.sigla} value={t.sigla}>{t.sigla} · {t.nome}</option>)}
         </select>
       )}

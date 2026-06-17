@@ -7,7 +7,7 @@ function CardPub({ p }) {
   const capa = capaDe(p);
   return (
     <Link href={`/artigos/${p.slug}/`} className="card pub" data-tema={p.tema}
-      data-busca={`${p.id} ${p.titulo_pt} ${p.titulo_original} ${p.tema_nome} ${p.fonte}`}>
+      data-busca={`${p.id} ${p.titulo_pt} ${p.titulo_original} ${p.tema_nome} ${p.fonte} ${p.autores_curto || ''}`}>
       <figure className="thumb">
         {capa ? (
           <img src={capa} alt="" loading="lazy" width="1536" height="1024" />
@@ -18,6 +18,9 @@ function CardPub({ p }) {
       <div className="card-body">
         <span className="badge">{p.tema} · {p.tema_nome}</span>
         <h3>{p.titulo_pt}</h3>
+        {p.autores_curto && (
+          <p className="card-autores">{p.autores_curto}{p.ano ? ` · ${p.ano}` : ''}</p>
+        )}
         <p className="orig">{p.titulo_original}</p>
         <div className="meta">
           <span className="badge cinza">{p.fonte}</span>
@@ -38,18 +41,14 @@ export default function Home() {
         <div className="container inner">
           <div>
             <h2>A ciência da transformação digital do SUS, acessível para todos</h2>
-            <p>
-              43 publicações científicas produzidas pelo TED 77/2024 — traduzidas em apostilas,
-              vídeos, podcasts, fichamentos, painéis interativos e bases de dados abertas.
-            </p>
             <div className="ctas">
-              <a className="btn cta" href="#areas">Explorar as 6 áreas</a>
+              <a className="btn cta" href="#areas">Explorar os 6 eixos</a>
               <Link className="btn ghost" href={`/artigos/${prontos[0].slug}/`}>Ver o hotsite piloto</Link>
             </div>
           </div>
           <div className="num">
             <div><b>43</b> publicações</div>
-            <div><b>6</b> áreas temáticas</div>
+            <div><b>6</b> eixos temáticos</div>
             <div><b>7</b> formatos</div>
             <div><b>100%</b> aberto</div>
           </div>
@@ -57,8 +56,8 @@ export default function Home() {
       </section>
 
       <div className="container">
-        <h2 className="secao" id="areas"><span className="kicker">Explorar por área</span>Seis eixos temáticos</h2>
-        <p className="lead">Cada área reúne as publicações e todos os conteúdos derivados delas.</p>
+        <h2 className="secao" id="areas"><span className="kicker">Explorar por eixo temático</span>Seis eixos temáticos</h2>
+        <p className="lead">Cada eixo temático reúne as publicações e todos os conteúdos derivados delas.</p>
         <div className="grid g3">
           {TEMAS.map((t) => (
             <Link key={t.id} href={`/areas/${t.id}/`} className="card area" data-tema={t.sigla}>
@@ -78,21 +77,29 @@ export default function Home() {
         <p className="lead" style={{ margin: 'var(--s-5) 0 var(--s-2)' }}>
           Acervo completo — {PUBLICACOES.length} artigos (os demais entram no ar em ondas):
         </p>
-        <FiltroLista alvo="grade-artigos" areas={TEMAS} placeholder="Filtrar por título, sigla ou tema…" />
+        <p className="legenda-siglas">
+          <b>Como ler os códigos:</b> <b>CAP</b> capítulo de livro · <b>IJC</b> IJCIEOM (congresso) ·{' '}
+          <b>IND</b> INDUSCON (congresso IEEE).
+        </p>
+        <FiltroLista alvo="grade-artigos" areas={TEMAS} placeholder="Filtrar por título, autor, sigla ou tema…" />
         <div className="grid gmini" id="grade-artigos">
           {PUBLICACOES.map((p) => {
-            const busca = `${p.id} ${p.titulo_pt} ${p.titulo_original} ${p.tema_nome} ${p.fonte}`;
+            const busca = `${p.id} ${p.titulo_pt} ${p.titulo_original} ${p.tema_nome} ${p.fonte} ${p.autores_curto || ''}`;
+            const autoria = p.autores_curto
+              ? `${p.autores_curto}${p.ano ? ` · ${p.ano}` : ''}` : null;
             return p.manifest ? (
               <Link key={p.id} href={`/artigos/${p.slug}/`} className="card mini ativo"
                 data-tema={p.tema} data-busca={busca}>
                 <span className="sigla-mini">{p.id}</span>
                 <b>{p.titulo_pt}</b>
+                {autoria && <small className="card-autores">{autoria}</small>}
                 <small className="no-ar">✓ no ar — abrir hotsite</small>
               </Link>
             ) : (
               <div key={p.id} className="card mini" data-tema={p.tema} data-busca={busca}>
                 <span className="sigla-mini">{p.id}</span>
                 <b>{p.titulo_pt}</b>
+                {autoria && <small className="card-autores">{autoria}</small>}
                 <small>em produção</small>
               </div>
             );
