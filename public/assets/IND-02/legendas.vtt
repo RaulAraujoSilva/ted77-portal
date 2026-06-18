@@ -1,101 +1,101 @@
 WEBVTT
 
 1
-00:00:03.400 --> 00:00:07.904
+00:00:03.400 --> 00:00:08.241
 O Brasil guarda um dos maiores tesouros de dados de saúde do planeta.
 
 2
-00:00:08.148 --> 00:00:17.576
+00:00:08.450 --> 00:00:17.947
 São registros de internações. consultas. nascimentos e vacinas de um sistema que atende mais de setenta e cinco por cento da população.
 
 3
-00:00:17.901 --> 00:00:19.956
+00:00:18.330 --> 00:00:20.641
 Mas esse tesouro está trancado.
 
 4
-00:00:20.281 --> 00:00:24.343
+00:00:21.081 --> 00:00:25.040
 Neste vídeo. você vai conhecer o mapa para destrancá-lo.
 
 5
-00:00:24.333 --> 00:00:28.919
+00:00:25.032 --> 00:00:29.734
 Tudo começa no DATASUS. o departamento de informática do SUS.
 
 6
-00:00:29.093 --> 00:00:42.758
+00:00:30.013 --> 00:00:44.269
 Ele reúne o Sistema de Internações Hospitalares. o de Atendimentos Ambulatoriais. o Cadastro de Estabelecimentos. e os registros de Mortalidade. Nascidos Vivos e Doenças de Notificação.
 
 7
-00:00:43.083 --> 00:00:48.900
+00:00:44.478 --> 00:00:50.202
 Cada um foi criado para uma finalidade específica — e é aí que mora o problema.
 
 8
-00:00:49.800 --> 00:00:52.540
+00:00:51.132 --> 00:00:53.698
 Esses sistemas não conversam entre si.
 
 9
-00:00:52.865 --> 00:00:59.750
+00:00:53.907 --> 00:01:00.304
 Cada um usa formatos e códigos próprios. e não existe um identificador único de paciente.
 
 10
-00:00:59.959 --> 00:01:06.333
+00:01:00.478 --> 00:01:06.794
 Na prática. é impossível ligar automaticamente uma consulta à internação que veio depois.
 
 11
-00:01:06.774 --> 00:01:13.995
+00:01:07.119 --> 00:01:14.445
 A trajetória do paciente se perde — e o gestor enxerga apenas fragmentos. em tabelas estáticas.
 
 12
-00:01:14.900 --> 00:01:18.604
+00:01:15.345 --> 00:01:19.141
 A boa notícia: existe um caminho. e ele é aberto.
 
 13
-00:01:18.755 --> 00:01:28.135
+00:01:19.316 --> 00:01:29.010
 Primeiro. ferramentas gratuitas como o PySUS — um pacote Python de código aberto — baixam os dados direto dos servidores oficiais.
 
 14
-00:01:28.310 --> 00:01:35.786
+00:01:29.242 --> 00:01:36.696
 Depois. vem a limpeza: padronizar códigos. eliminar duplicidades. tratar valores ausentes.
 
 15
-00:01:35.960 --> 00:01:51.448
+00:01:36.870 --> 00:01:51.964
 O passo decisivo é a vinculação probabilística de registros. que usa nome. data de nascimento e localização para reconectar as pontas — uma técnica já aplicada a centenas de milhões de registros no Brasil.
 
 16
-00:01:51.599 --> 00:01:58.646
+00:01:52.347 --> 00:01:59.324
 Por fim. os dados organizados alimentam um armazém analítico. pronto para perguntas complexas.
 
 17
-00:01:59.546 --> 00:02:08.938
+00:02:00.224 --> 00:02:08.990
 E o resultado é este painel — construído por este projeto. com a metodologia do artigo. sobre dados reais e públicos do DATASUS.
 
 18
-00:02:09.055 --> 00:02:14.941
+00:02:09.268 --> 00:02:15.421
 Em poucos cliques: internações por município. valores. tendências mês a mês.
 
 19
-00:02:15.069 --> 00:02:20.386
+00:02:15.596 --> 00:02:20.390
 O que antes exigia dias montando tabelas. agora se explora em minutos.
 
 20
-00:02:20.560 --> 00:02:25.041
+00:02:20.565 --> 00:02:24.187
 E ele está disponível. aberto. no portal do projeto.
 
 21
-00:02:25.946 --> 00:02:32.622
+00:02:25.091 --> 00:02:31.813
 Para o gestor. isso significa detectar surtos e mudanças no uso dos serviços a tempo de agir.
 
 22
-00:02:32.831 --> 00:02:44.290
+00:02:32.254 --> 00:02:44.224
 Para a sociedade. significa transparência: os mesmos dados que sustentam a decisão pública ficam abertos para qualquer pesquisador — ou qualquer cidadão — conferir.
 
 23
-00:02:45.190 --> 00:02:54.025
+00:02:45.124 --> 00:02:53.820
 Este vídeo faz parte da série de divulgação científica do TED setenta e sete. uma parceria da UFF com o Ministério da Saúde.
 
 24
-00:02:54.269 --> 00:03:00.376
+00:02:54.029 --> 00:03:00.507
 O artigo completo. a base de dados e o painel interativo estão no portal do projeto.
 
 25
-00:03:00.550 --> 00:03:07.760
+00:03:00.716 --> 00:03:08.158
 Explore. reutilize e compartilhe — o dado é público. e o conhecimento também deve ser.
