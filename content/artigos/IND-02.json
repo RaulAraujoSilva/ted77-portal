@@ -13,6 +13,6 @@
  },
  "links": {
   "painel": "https://raularaujosilva.github.io/ted77-sih-rj-dados-abertos/painel/",
-  "base": "https://github.com/RaulAraujoSilva/ted77-sih-rj-dados-abertos"
+  "base": "https://ted77-portal.vercel.app/dados/"
  }
 }

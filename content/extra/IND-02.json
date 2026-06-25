@@ -150,7 +150,7 @@
   },
   {
    "texto": "TED 77/2024 — Transformação Digital do SUS (UFF/FEC/SEIDIGI-MS). Internações hospitalares do SUS no Rio de Janeiro — 2025 (SIH/SUS), base de dados aberta, v1.0.0, 2026.",
-   "url": "https://github.com/RaulAraujoSilva/ted77-sih-rj-dados-abertos"
+   "url": "https://ted77-portal.vercel.app/dados/"
   }
  ],
  "historia": true,
@@ -169,9 +169,14 @@
   "OLAP — fatos e dimensões": "Arquitetura analítica: tabela fato (eventos) + dimensões (tempo, lugar, especialidade) prontas para cruzamentos rápidos.",
   "Tendências em minutos, não dias": "Síntese do ganho para o gestor: surtos e mudanças de demanda detectados a tempo de agir.",
   "Caso real: 926 mil internações RJ-2025": "Demonstração do projeto: um ano inteiro do SIH-RJ processado pelo pipeline e publicado.",
-  "Base aberta + painel públicos": "CSV + dicionário + datapackage no GitHub e painel interativo no portal — tudo CC-BY 4.0.",
+  "Base aberta + painel públicos": "CSV + dicionário + datapackage publicados como dados abertos e painel interativo no portal do projeto — tudo CC-BY 4.0.",
   "OMOP · HL7 FHIR": "Padrões internacionais de dados em saúde que dão interoperabilidade global às bases brasileiras.",
-  "IA preditiva explicável": "Modelos de previsão de tendências e anomalias cujas decisões o gestor consegue entender e auditar."
+  "IA preditiva explicável": "Modelos de previsão de tendências e anomalias cujas decisões o gestor consegue entender e auditar.",
+  "SUS atende +75% da população": "Mais de três em cada quatro brasileiros dependem exclusivamente do SUS — por isso cada registro administrativo vira um dado de saúde pública.",
+  "Silos: formatos e códigos próprios": "Cada sistema nasceu para uma finalidade administrativa, com layout e códigos diferentes — integrá-los exige tradução campo a campo.",
+  "Trajetória do cuidado se perde": "Sem chave comum, não dá para seguir a mesma pessoa da internação ao óbito ou ao atendimento ambulatorial — a história clínica fica fragmentada.",
+  "Painéis interativos (BI)": "Ferramentas de Business Intelligence que transformam os dados integrados em visualizações com filtros, mapas e cruzamentos em tempo real.",
+  "Nuvem e tempo quase real": "Próximo passo: processar os dados em nuvem e atualizar os painéis em quase tempo real, encurtando a distância entre o evento e a decisão."
  },
  "citacao": {
   "abnt": "TED 77/2024 — TRANSFORMAÇÃO DIGITAL DO SUS (UFF/FEC/SEIDIGI-MS). O tesouro de dados do SUS: como transformar o DATASUS em painéis de gestão (versão de divulgação científica de ALVES et al., Building Health Management Dashboards with DATASUS Public Data, IEEE INDUSCON). Portal de Divulgação Científica do TED 77/2024, 2026. Disponível em: https://ted77-portal.vercel.app/artigos/ind-02/.",

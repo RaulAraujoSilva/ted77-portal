@@ -324,8 +324,15 @@ img.minia{width:100%;border-radius:var(--r-1);border:1px solid var(--borda)}
   background:#EAF5EC;border:1px solid #B9DFBE;border-radius:999px;padding:4px 12px;margin-top:var(--s-2)}
 
 /* ================= MAPA MENTAL / CITAÇÃO ================= */
-.mapa-mental-caixa{width:100%;border:1px solid var(--borda);border-radius:var(--r-1);background:#fff;overflow:hidden}
-.mapa-mental-caixa svg{width:100%;height:min(78vh,640px);min-height:440px;display:block}
+.mapa-mental-caixa{position:relative;width:100%;border:1px solid var(--borda);border-radius:var(--r-1);background:#fff}
+.mapa-mental-caixa svg{width:100%;height:min(78vh,640px);min-height:440px;display:block;border-radius:var(--r-1)}
+/* folha com explicação: sublinhado pontilhado + cursor de ajuda */
+.mapa-mental-caixa .mm-folha{border-bottom:2px dotted var(--govbr);cursor:help}
+/* tooltip flutuante da explicação (posicionado no hover, dentro da caixa) */
+.mm-tip{position:absolute;left:0;top:0;max-width:min(300px,72vw);background:var(--tinta);color:#fff;
+  font-size:.8rem;line-height:1.45;padding:9px 12px;border-radius:8px;pointer-events:none;
+  opacity:0;visibility:hidden;transition:opacity var(--dur) var(--ease);z-index:40;box-shadow:var(--sombra-2)}
+.mm-tip.mostrar{opacity:1;visibility:visible}
 .mapa-texto{margin-top:var(--s-2)}
 .mapa-texto summary{cursor:pointer;font-size:.84rem;color:var(--govbr);font-weight:700}
 .mapa-texto pre{background:var(--off);border:1px solid var(--borda);border-radius:var(--r-1);

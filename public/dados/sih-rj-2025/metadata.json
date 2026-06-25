@@ -2,7 +2,7 @@
   "name": "sih-rj-2025-internacoes",
   "title": "Internações hospitalares do SUS no Rio de Janeiro — 2025 (SIH/SUS)",
   "description": "Base de dados aberta derivada dos microdados públicos do SIH/SUS (AIH reduzida, arquivos RDRJ2501–RDRJ2512) do DATASUS/Ministério da Saúde, tratada segundo a metodologia do artigo 'Building Health Management Dashboards with DATASUS Public Data' (TED 77/2024, UFF). Inclui agregações por município, especialidade, capítulo CID-10 e mês.",
-  "homepage": "https://github.com/RaulAraujoSilva/ted77-sih-rj-dados-abertos",
+  "homepage": "https://ted77-portal.vercel.app/dados/",
   "version": "1.0.0",
   "licenses": [
     {

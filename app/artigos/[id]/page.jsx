@@ -181,8 +181,7 @@ export default function Artigo({ params }) {
       {l?.base && (
         <Sec id="sec-dados" icone="base" tipo="bases" grupo="dados" titulo="Base de dados aberta">
           <div className="botoes">
-            <a className="btn" href={l.base} target="_blank" rel="noopener">Acessar a base de dados aberta (GitHub) ↗</a>
-            <Link className="btn sec" href="/dados/" target="_blank" rel="noopener">Baixar pelos dados abertos</Link>
+            <Link className="btn" href="/dados/" target="_blank" rel="noopener">Acessar a base de dados aberta ↗</Link>
           </div>
         </Sec>
       )}

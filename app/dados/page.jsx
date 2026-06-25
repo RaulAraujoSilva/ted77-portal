@@ -45,7 +45,7 @@ export default function Dados() {
             ))}
           </ul>
           <div className="botoes" style={{ marginTop: 'var(--s-3)' }}>
-            <a className="btn" href={c.github}>Repositório completo (GitHub) ↗</a>
+            <a className="btn" href={c.github} target="_blank" rel="noopener">Repositório de dados abertos (GitHub) ↗</a>
             <a className="btn ter" href={c.artigo}>artigo de origem</a>
           </div>
           <p className="quiz-nota" style={{ marginTop: 'var(--s-3)' }}>
